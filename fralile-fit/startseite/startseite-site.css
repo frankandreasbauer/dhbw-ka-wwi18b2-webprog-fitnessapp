@@ -7,10 +7,24 @@ html, body {
     height: 100%;
 }
 
+header{
+  background-color: blue;
+}
+
 h1 {
   text-align: center;
-  font-family: Garamon, serif;
+  font-family: Tahoma, serif;
   font-weight: normal;
   margin-bottom: auto;
+  font-size: 350%;
+  color: white;
+}
+
+button{
+  display: block;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+
 
 }
