@@ -7,33 +7,68 @@
 
         <script src="index.js"></script>
         <script src="app.js"></script>
+        <script src="persönlicheDaten.js"></script>
+        <script src="trainingsplan.js"></script>
+        <script src="ziele.js"></script>
 
         <link rel="stylesheet" href="index.css" />
         <link rel="stylesheet" href="app.css" />
+        <link rel="stylesheet" href="theme.css" />
+        <link rel="stylesheet" href="persönlicheDaten.css" />
+        <link rel="stylesheet" href="trainingsplan.css" />
+        <link rel="stylesheet" href="ziele.css" />
 
     </head>
 
-<section>
-  <header>
-    <!--Inhalt je nach view-->
-    <div class="top">
-      <div class="item_header">
-        <h1>fralile-fit</h1>
-      </div>
-    </div>
-  </header>
 
-  <!--Inhalt je nach view-->
-  <main>
-    <div class="item_button">
-    <button type="button" id="persDatBtn">Pers&ouml;nliche Daten</button>
-    <button type="button" id="zieleBtn">Ziele</button>
-    <button type="button" id="trainBtn">Trainingsplan</button>
-    </div>
-  </main>
-
-</section>
     <body>
-        <h1>Hallo, Welt!</h1>
+      <!-- ========================= -->
+<!-- Grundgerüst der Anwendung -->
+<!-- ========================= -->
+<section id="app">
+    <!-- Topbar -->
+    <header>
+        <!-- Obere Zeile (fester Inhalt) -->
+        <div class="top left">
+            <div class="item inactive">
+                <b>
+                    fralile-fit
+                </b>
+            </div>
+        </div
+    </header>
+    <main>
+         <div class="button">
+           <button type="button" id="persDatBtn">Pers&ouml;nliche Daten</button>
+           <button type="button" id="zieleBtn">Ziele</button>
+           <button type="button" id="trainBtn">Trainingsplan</button>
+         </div>
+     </main>
+</section>
+
+<section id="persDatSec" class="hidden">
+  <header>
+         <div class="left">
+             <div class="back">
+                 Zurück
+             </div>
+         </div>
+  </header>
+  <main>
+       <div class="padding">
+           Übersicht
+       </div>
+   </main>
+</section>
+
+<section id="zieleSec" class="hidden">
+<p>hierstehtwas</p>
+</section>
+
+
+<section id="trainSec" class="hidden">
+<p>hierstehtwas</p>
+</section>
+
     </body>
 </html>
