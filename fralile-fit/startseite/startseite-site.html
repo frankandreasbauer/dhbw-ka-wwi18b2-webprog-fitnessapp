@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>fralile-fit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+    <!-- Klasse startseite-site.js: Steuert Logik der Startseite-->
+  <script src="startseite-site.js"></script>
+  <link rel="stylesheet" href="startseite-site.css"/>
+  </head>
+
+  <header>
+    <h1>fralile-fit</h1>
+  </header>
+
+  <script>
+            window.addEventListener("load", () => {
+                let pages = [{
+                    url: "^/$",
+                    klass: PageZiele,
+                },{
+                    url: "^/Detail/(.*)$",
+                    klass:  PagePersDat,
+                },{
+                    url: ".*",
+                    klass: PageTrain,
+                }];
+
+                let app = new App("fralile-fit", pages);
+                app.run();
+            });
+        </script>
+
+
+  <body>
+
+    <button type="button" id="persDatBtn">Pers&ouml;nliche Daten</button>
+    <button type="button" id="zieleBtn">Ziele</button>
+    <button type="button" id="trainBtn">Trainingsplan</button>
+
+  </body>
+
+  </html>
