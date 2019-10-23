@@ -15,6 +15,25 @@
     <h1>fralile-fit</h1>
   </header>
 
+  <script>
+            window.addEventListener("load", () => {
+                let pages = [{
+                    url: "^/$",
+                    klass: PageZiele,
+                },{
+                    url: "^/Detail/(.*)$",
+                    klass:  PagePersDat,
+                },{
+                    url: ".*",
+                    klass: PageTrain,
+                }];
+
+                let app = new App("fralile-fit", pages);
+                app.run();
+            });
+        </script>
+
+
   <body>
 
     <button type="button" id="persDatBtn">Pers&ouml;nliche Daten</button>
