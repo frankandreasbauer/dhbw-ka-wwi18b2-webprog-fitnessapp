@@ -109,9 +109,5 @@ class PageOverview {
 
     _onShowMoreButtonClicked() {
       alert(window.location.href)
-      window.location.replace("http://127.0.0.1:3000/LenasSpace/Loesung/Ziele/ziele.html");
-// window.location.assign("https://www.w3schools.com")
-// window.location.assign("https://www.w3schools.com")
-
     }
 }
