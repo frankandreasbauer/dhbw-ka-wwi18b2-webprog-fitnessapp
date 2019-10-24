@@ -206,6 +206,9 @@ header .content h6 {
  * HAUPTBEREICH
  */
 main {
+    align-items: center;
+    display: inline-block;
+    text-align: center;
     padding: var(--content-padding);
     background: rgba(240,240,240, 0.9);
     flex: 1;
