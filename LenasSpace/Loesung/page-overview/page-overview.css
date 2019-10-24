@@ -2,15 +2,15 @@
  * Stylesheet zur Klasse PageOverview: Startseite der App
  */
 
-.tile {
+/* .tile {
   display: block;
   align-items: center;
-  margin-right:300px;
-  margin-left:300px;
+  margin-right:auto;
+  margin-left:auto;
   margin-bottom: 10px;
   margin-top:10px;
 
-}
+} */
 
 .tile{
   display: inline-block;
