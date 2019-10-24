@@ -37,12 +37,12 @@
 
 .tile a,
 .tile a:visited {
-    color: black;
+    color: #000000;
     text-decoration: none;
 }
 
 .tile:hover {
-    background: white;
+    background-color:#454647;
     transform: scale(1.01) rotate(0.5deg);
     cursor: pointer;
 }
