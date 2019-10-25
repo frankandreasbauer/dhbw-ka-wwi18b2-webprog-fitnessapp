@@ -110,17 +110,14 @@ class PageOverview {
     }
 
     _onPersButtonClicked() {
-      alert(window.location.href)
       location.hash = "#/Target/";
     }
 
     _onZielButtonClicked() {
-      alert(window.location.href)
       location.hash = "#/Personal/";
     }
 
     _onTrainButtonClicked() {
-      alert(window.location.href)
       location.hash = "#/Train/";
     }
 }
