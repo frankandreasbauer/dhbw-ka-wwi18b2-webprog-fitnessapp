@@ -97,7 +97,9 @@ class PageOverview {
         // Seite zur Anzeige bringen
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
-        pageDom.querySelector("#persDatBtn").addEventListener("click", () => this._onShowMoreButtonClicked());
+        pageDom.querySelector("#persDatBtn").addEventListener("click", () => this._onPersButtonClicked());
+        pageDom.querySelector("#zieleBtn").addEventListener("click", () => this._onZielButtonClicked());
+        pageDom.querySelector("#trainBtn").addEventListener("click", () => this._onTrainButtonClicked());
 
         this._app.setPageTitle("Startseite");
         this._app.setPageCss(css);
@@ -107,8 +109,18 @@ class PageOverview {
 
     }
 
-    _onShowMoreButtonClicked() {
+    _onPersButtonClicked() {
       alert(window.location.href)
-      location.hash = "#/Ziele";
+      location.hash = "#/Detail/";
+    }
+
+    _onZielButtonClicked() {
+      alert(window.location.href)
+      location.hash = "#/Detail/";
+    }
+
+    _onTrainButtonClicked() {
+      alert(window.location.href)
+      location.hash = "#/Detail/";
     }
 }
