@@ -109,5 +109,6 @@ class PageOverview {
 
     _onShowMoreButtonClicked() {
       alert(window.location.href)
+      location.hash = "#/Ziele";
     }
 }

@@ -79,5 +79,6 @@ class PageDetail {
      */
     _onShowMoreButtonClicked() {
         alert(this._data.name);
+        location.hash = "#/Ziele/";
     }
 }
