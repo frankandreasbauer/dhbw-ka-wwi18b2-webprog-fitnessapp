@@ -116,11 +116,11 @@ class PageOverview {
 
     _onZielButtonClicked() {
       alert(window.location.href)
-      location.hash = "#/Detail/";
+      location.hash = "#/Personal/";
     }
 
     _onTrainButtonClicked() {
       alert(window.location.href)
-      location.hash = "#/Detail/";
+      location.hash = "#/Train/";
     }
 }
