@@ -111,7 +111,7 @@ class PageOverview {
 
     _onPersButtonClicked() {
       alert(window.location.href)
-      location.hash = "#/Ziele/";
+      location.hash = "#/Target/";
     }
 
     _onZielButtonClicked() {

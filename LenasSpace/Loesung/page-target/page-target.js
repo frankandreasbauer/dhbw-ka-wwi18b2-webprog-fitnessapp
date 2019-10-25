@@ -19,8 +19,8 @@ class PageTarget {
      */
     async show() {
         // Anzuzeigenden Seiteninhalt nachladen
-        let html = await fetch("ziele/ziele.html");
-        let css = await fetch("ziele/ziele.css");
+        let html = await fetch("page-target/page-target.html");
+        let css = await fetch("page-target/page-target.css");
 
         if (html.ok && css.ok) {
             html = await html.text();

@@ -33,14 +33,20 @@
                     url: "^/$",
                     klass: PageOverview,
                 },{
+                    url:"^/Personal/(.*)$",
+                    klass: PageTarget,
+                },{
+                    url:"^/Target/(.*)$",
+                    klass: PageTarget,
+                },{
+                    url:"^/Train/(.*)$",
+                    klass: PageTarget,
+                },{
                     url: "^/Detail/(.*)$",
                     klass: PageDetail,
                 },{
                     url: ".*",
                     klass: PageNotFound,
-                },{
-                    url:"^/Ziele/(.*)$",
-                    klass: PageTarget,
                 }
               ];
 
