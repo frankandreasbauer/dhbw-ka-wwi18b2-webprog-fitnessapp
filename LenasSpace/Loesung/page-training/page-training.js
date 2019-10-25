@@ -5,7 +5,7 @@
  * Klasse PageNotFound: Stellt eine Defaultseite zur Verfügung, die immer
  * dann angezeigt wird, wenn der Anwender eine unbekannte URL aufruft.
  */
-class PageTarget {
+class PageTraining {
     /**
      * Konstruktor
      * @param {App} app Zentrale Instanz der App-Klasse
