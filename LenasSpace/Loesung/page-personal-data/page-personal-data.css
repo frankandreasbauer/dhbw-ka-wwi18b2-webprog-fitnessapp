@@ -1,0 +1,18 @@
+/* Klassen für Text-Ausrichtung */
+.left {text-align: left;}
+.center {text-align: center;}
+
+/* Erstellung von Textboxen */
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input{ font-size: 1rem; },
+label {
+    margin: .4rem 0;
+}
+
+/* Aussehen der Dropdown-Liste `*/
+.option { font-size: 100px; }

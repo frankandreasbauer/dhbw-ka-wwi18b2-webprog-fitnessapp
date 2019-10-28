@@ -1,8 +1,11 @@
-table, tr, td, th {
+/* table, tr, td, th {
   border: 1px solid black;
   display: inline-block;
   text-align: center;
-}
+  border-radius: 100rem;
+  background-color:#a0a2a3;
+
+} */
 
 .add-train {
   display: flex;
@@ -31,3 +34,41 @@ button {
     button:hover{
        background-color:#454647;
     }
+
+    table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+table * {
+  position: relative;
+}
+table td, table th {
+  padding-left: 8px;
+}
+table thead tr {
+  height: 60px;
+  background: #36304a;
+}
+table tbody tr {
+  height: 50px;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table td, table th {
+  text-align: left;
+}
+table td.l, table th.l {
+  text-align: right;
+}
+table td.c, table th.c {
+  text-align: center;
+}
+table td.r, table th.r {
+  text-align: center;
