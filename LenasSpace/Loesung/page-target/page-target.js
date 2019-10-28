@@ -6,6 +6,7 @@
  * dann angezeigt wird, wenn der Anwender eine unbekannte URL aufruft.
  */
 class PageTarget {
+
     /**
      * Konstruktor
      * @param {App} app Zentrale Instanz der App-Klasse
@@ -39,4 +40,17 @@ class PageTarget {
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
     }
+
 }
+var counter = 0;
+
+
+$("#links").click(function(){
+  counter = counter - 1;
+  $("#mitte a").text(counter);
+});
+
+$("#rechts").click(function(){
+  counter = counter + 1;
+  $("#mitte a").text(counter);
+});

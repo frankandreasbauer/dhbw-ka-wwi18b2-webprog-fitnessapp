@@ -1,1 +1,31 @@
+.box {
+  width: 100px;
+  height:100px;
+  background-color: gray;
+  float: left;
+  text-align: center;
+  font-family: arial;
+  font-size:200%;
+  line-height:100px;
+  color:black;
 
+}
+#links {
+    color: black;
+  background-color:red;
+  cursor: pointer;
+
+}
+#mitte {
+  background-color: grey;
+
+}
+#rechts {
+  background-color: red;
+  cursor: pointer;
+
+}
+
+.linksBtn{
+  color: black;
+}
