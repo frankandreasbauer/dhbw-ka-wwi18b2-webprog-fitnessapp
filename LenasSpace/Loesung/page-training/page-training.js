@@ -42,7 +42,7 @@ class PageTraining {
 }
 
 function tableButton() {
-  var table = document.getElementById("train-table");
+  var table = document.getElementById("train-insert");
   if(document.getElementById("uebung").value != ""){
   var row = table.insertRow(0);
   var uebung = row.insertCell(0);
@@ -60,9 +60,10 @@ else {
 }
 
 function myDeleteFunction() {
-  if(document.getElementById("train-table").rows.length == 1){
+
+  if(document.getElementById("train-insert").rows.length == 0){
     alert("Tabelle ist leer");
   }
   else{
-  document.getElementById("train-table").deleteRow(0);}
+  document.getElementById("train-insert").deleteRow(0);}
 }
