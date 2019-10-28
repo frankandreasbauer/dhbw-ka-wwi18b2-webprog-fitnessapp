@@ -43,7 +43,7 @@ class PageTarget {
 
 }
 var counter = 0;
-
+ 
 
 $("#links").click(function(){
   counter = counter - 1;
