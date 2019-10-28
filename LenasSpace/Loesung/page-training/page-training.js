@@ -43,13 +43,26 @@ class PageTraining {
 
 function tableButton() {
   var table = document.getElementById("train-table");
+  if(document.getElementById("uebung").value != ""){
   var row = table.insertRow(0);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  cell1.innerHTML = document.getElementById("uebung").value;
-  cell2.innerHTML = "NEW CELL2";
+  var uebung = row.insertCell(0);
+  var satz = row.insertCell(1);
+  var wdh = row.insertCell(2);
+  var gewicht = row.insertCell(3);
+  uebung.innerHTML = document.getElementById("uebung").value;
+  satz.innerHTML = document.getElementById("satz").value;
+  wdh.innerHTML = document.getElementById("wdh").value;
+  gewicht.innerHTML = document.getElementById("gewicht").value;
+}
+else {
+  alert("Bitte alle Felder füllen");
+}
 }
 
 function myDeleteFunction() {
-  document.getElementById("train-table").deleteRow(0);
+  if(document.getElementById("train-table").rows.length == 1){
+    alert("Tabelle ist leer");
+  }
+  else{
+  document.getElementById("train-table").deleteRow(0);}
 }
