@@ -5,6 +5,7 @@
  * Klasse PageNotFound: Stellt eine Defaultseite zur Verfügung, die immer
  * dann angezeigt wird, wenn der Anwender eine unbekannte URL aufruft.
  */
+
 class PageTarget {
 
     /**
@@ -42,8 +43,10 @@ class PageTarget {
     }
 
 }
+
+
 var counter = 0;
- 
+
 
 $("#links").click(function(){
   counter = counter - 1;

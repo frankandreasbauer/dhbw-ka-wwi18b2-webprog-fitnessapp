@@ -1,31 +1,62 @@
 .box {
-  width: 100px;
-  height:100px;
-  background-color: gray;
+  background-color: grey;
   float: left;
   text-align: center;
   font-family: arial;
   font-size:200%;
-  line-height:100px;
+  line-height:50px;
   color:black;
 
+
 }
+
+.text {
+  color: black;
+}
+
 #links {
-    color: black;
   background-color:red;
   cursor: pointer;
+  width: 50px;
+  height:50px;
+  position:  inherit;
+  top:50%;
+  left:58%;
+  margin-top:+20px;
+  margin-left: 795px;
+
 
 }
 #mitte {
   background-color: grey;
-
+  width: 200px;
+  heigt: 50px;
+  position:  inherit;
+  top:50%;
+  left:58%;
+  margin-top:+20px;
 }
-#rechts {
+ #rechts{
   background-color: red;
   cursor: pointer;
+  width: 50px;
+  height:50px;
+  position:  inherit;
+  top:50%;
+  left:58%;
+  margin-top:+20px;
+  margin-left:-20px;
 
 }
 
 .linksBtn{
-  color: black;
+  color: white;
+}
+
+.rechtsBtn{
+  color: white;
+}
+
+.mitteBtn {
+  color: white;
 }
