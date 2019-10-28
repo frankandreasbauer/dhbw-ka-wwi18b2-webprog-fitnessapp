@@ -43,8 +43,20 @@ class PageTraining {
 
 function tableButton() {
   var table = document.getElementById("train-insert");
-  if(document.getElementById("uebung").value != ""){
-  var row = table.insertRow(0);
+  if(document.getElementById("uebung").value == ""){
+  alert("Bitte alle Felder füllen");
+}
+else if(document.getElementById("satz").value ==""){
+  alert("Bitte alle Felder füllen");
+}
+else if(document.getElementById("wdh").value ==""){
+  alert("Bitte alle Felder füllen");
+}
+else if(document.getElementById("gewicht").value ==""){
+  alert("Bitte alle Felder füllen");
+}
+else {
+  var row = table.insertRow(1);
   var uebung = row.insertCell(0);
   var satz = row.insertCell(1);
   var wdh = row.insertCell(2);
@@ -53,17 +65,14 @@ function tableButton() {
   satz.innerHTML = document.getElementById("satz").value;
   wdh.innerHTML = document.getElementById("wdh").value;
   gewicht.innerHTML = document.getElementById("gewicht").value;
-}
-else {
-  alert("Bitte alle Felder füllen");
-}
+  }
 }
 
 function myDeleteFunction() {
 
-  if(document.getElementById("train-insert").rows.length == 0){
+  if(document.getElementById("train-insert").rows.length == 1){
     alert("Tabelle ist leer");
   }
   else{
-  document.getElementById("train-insert").deleteRow(0);}
+  document.getElementById("train-insert").deleteRow(1);}
 }
