@@ -34,7 +34,7 @@ class PagePersonalData {
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
 
-        this._app.setPageTitle("Persoenliche Daten");
+        this._app.setPageTitle("Persönliche Daten");
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
