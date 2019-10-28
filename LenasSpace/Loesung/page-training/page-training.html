@@ -6,14 +6,34 @@
 
 
 <main>
-<div class="formitem">
-  <label>
-  <input placeholder="Text eingeben und Auslesen" type="text" name="vorname" id="vorname">
-</label>
-<label>
-  <button id="textfeld" type="button">Auslesen</button>
-</label>
-</div>
-<div class="textfeld-msg"></div>
+  <div id="content-train">
+
+    <form id="add-train">
+      <input type="text" id="uebung" placeholder="Uebung">
+      <input type="number" name="satz" placeholder="Satz">
+      <input type="number" name="wdh" placeholder="Wdh">
+      <input type="number" name="gewicht" placeholder="Gewicht">
+      <button type="button" onclick="tableButton()">Uebung hinzufügen</button>
+      <button type="button" onclick="myDeleteFunction()">Uebung Löschen</button>
+    </form>
+
+    <table id="train-table">
+      <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+      </tr>
+      <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+      </tr>
+      <tr>
+        <td>Row3 cell1</td>
+        <td>Row3 cell2</td>
+      </tr>
+    </table>
+  </div>
+
+
+
 
 </main>

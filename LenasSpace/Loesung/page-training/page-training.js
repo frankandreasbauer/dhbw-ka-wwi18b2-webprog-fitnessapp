@@ -40,3 +40,16 @@ class PageTraining {
         this._app.setPageContent(pageDom.querySelector("main"));
     }
 }
+
+function tableButton() {
+  var table = document.getElementById("train-table");
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  cell1.innerHTML = document.getElementById("uebung").value;
+  cell2.innerHTML = "NEW CELL2";
+}
+
+function myDeleteFunction() {
+  document.getElementById("train-table").deleteRow(0);
+}
