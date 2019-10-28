@@ -110,11 +110,11 @@ class PageOverview {
     }
 
     _onPersButtonClicked() {
-      location.hash = "#/Target/";
+      location.hash = "#/Personal/";
     }
 
     _onZielButtonClicked() {
-      location.hash = "#/Personal/";
+      location.hash = "#/Target/";
     }
 
     _onTrainButtonClicked() {
