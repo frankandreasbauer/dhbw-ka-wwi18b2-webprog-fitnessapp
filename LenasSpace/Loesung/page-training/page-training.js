@@ -65,6 +65,11 @@ else {
   satz.innerHTML = document.getElementById("satz").value;
   wdh.innerHTML = document.getElementById("wdh").value;
   gewicht.innerHTML = document.getElementById("gewicht").value;
+  document.getElementById("uebung").value ="";
+  document.getElementById("satz").value ="";
+document.getElementById("wdh").value ="";
+document.getElementById("gewicht").value ="";
+
   }
 }
 
