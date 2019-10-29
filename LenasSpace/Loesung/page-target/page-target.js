@@ -44,7 +44,7 @@ class PageTarget {
 
 }
 
-var counter = 0;
+var counter = 0;  //Gewicht
 
 
 $("#links").click(function(){

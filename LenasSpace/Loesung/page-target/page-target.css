@@ -72,6 +72,11 @@
 .mitteBtn:hover{
   color:black;
 }
-.h3{
-  background-color: black;
+h3 {
+  margin-top: 150px;
+  margin-left: -1000px;
+}
+table{
+  border: 1px solid gray;
+  margin-left: 300px;
 }
