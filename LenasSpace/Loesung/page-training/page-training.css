@@ -7,13 +7,69 @@
 
 } */
 
+.train-table{
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-collapse: collapse;
+
+  table-layout: fixed;
+
+}
+
+#train-insert th{
+    text-align: center;
+    background-color: #9BAEFD;
+}
+
+
+#train-insert{
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-collapse: collapse;
+  background-color: white;
+}
+#train-insert td{
+border: 1px solid #9BAEFD;
+}
+
+#train-insert tr:first-child th {
+  border-top: 0;
+}
+#train-insert tr:last-child td {
+  border-bottom: 0;
+}
+#train-insert tr td:first-child,
+#train-insert tr th:first-child {
+  border-left: 0;
+}
+#train-insert tr td:last-child,
+#train-insert tr th:last-child {
+  border-right: 0;
+}
+
+/* tr, th, td{
+    border: 1px solid black;
+} */
+/* #train-table, th{
+  background-color:
+border: black; */
+  /* border-color: black;
+ */
+
+/* }
 .add-train {
   display: flex;
 }
 
 .btn-train {
   display: inline-block;
-}
+} */
 
 button {
     display: inline-block;
@@ -35,17 +91,20 @@ button {
        background-color:#454647;
     }
 
-    table {
-  border-spacing: 1;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-table * {
+    /* #train-insert{ */
+      /* text-align: left;
+      border-color: red;
+      background: white;
+      border-radius: 10px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative; */
+/* } */
+
+/* table{
+  border-color: black;
+} */
+/* table * {
   position: relative;
 }
 table td, table th {
@@ -72,3 +131,4 @@ table td.c, table th.c {
 }
 table td.r, table th.r {
   text-align: center;
+} */
