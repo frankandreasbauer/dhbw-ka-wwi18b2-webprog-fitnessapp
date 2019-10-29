@@ -75,15 +75,18 @@ else if(document.getElementById("gewicht").value ==""){
 else {
   var row = table.insertRow(1);
   var select = row.insertCell(0);
-  var uebung = row.insertCell(1);
-  var satz = row.insertCell(2);
-  var wdh = row.insertCell(3);
-  var gewicht = row.insertCell(4);
+  var kat=row.insertCell(1);
+  var uebung = row.insertCell(2);
+  var satz = row.insertCell(3);
+  var wdh = row.insertCell(4);
+  var gewicht = row.insertCell(5);
   select.innerHTML = createRadioElement("id"+count,false);
+  kat.innerHTML = document.getElementById("kategorie").value;
   uebung.innerHTML = document.getElementById("uebung").value;
   satz.innerHTML = document.getElementById("satz").value;
   wdh.innerHTML = document.getElementById("wdh").value;
   gewicht.innerHTML = document.getElementById("gewicht").value;
+  document.getElementById("kategorie").value="";
   document.getElementById("uebung").value ="";
   document.getElementById("satz").value ="";
   document.getElementById("wdh").value ="";
