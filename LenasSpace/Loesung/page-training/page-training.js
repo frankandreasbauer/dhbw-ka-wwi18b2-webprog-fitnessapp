@@ -34,7 +34,7 @@ class PageTraining {
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
 
-        this._app.setPageTitle("Trainingsplan");
+        this._app.setPageTitle("Trainingsplan",{isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
