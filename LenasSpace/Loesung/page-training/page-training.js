@@ -12,9 +12,8 @@ class PageTraining {
      */
     constructor(app) {
         this._app = app;
-        let count =1;
     }
-
+    count =1;
     /**
      * Seite anzeigen. Wird von der App-Klasse aufgerufen.
      */
@@ -73,20 +72,21 @@ class PageTraining {
       satz.innerHTML = document.getElementById("satz").value;
       wdh.innerHTML = document.getElementById("wdh").value;
       gewicht.innerHTML = document.getElementById("gewicht").value;
+      alert(this.count);
+      this._app.firebase.saveTrain({
+        id: "id"+this.count,
+        kategorie: kat.innerHTML,
+        uebung: uebung.innerHTML,
+        satz:  satz.innerHTML,
+        wdh:  wdh.innerHTML,
+        gewicht:  gewicht.innerHTML
+      });
       document.getElementById("kategorie").value="";
       document.getElementById("uebung").value ="";
       document.getElementById("satz").value ="";
       document.getElementById("wdh").value ="";
       document.getElementById("gewicht").value ="";
       this.count = this.count+1;
-      this._app.firebase.saveTrain({
-        id: this.count,
-        kategorie: kat.innerHTML,
-        uebung: uebung.innerHTML,
-        satz: satz.innerHTML,
-        wdh: wdh.innerHTML,
-        gewicht: gewicht.innerHTML
-      });
       }
     }
 
