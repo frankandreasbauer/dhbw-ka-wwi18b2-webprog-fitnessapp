@@ -1,12 +1,6 @@
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 
 
-
-class Database{
+class Firebase{
   constructor(){
     firebase.initializeApp({
       apiKey: "AIzaSyD36mZGtDuNp-kk4PPaQoZyNpf8r3gfqVM",
@@ -21,6 +15,10 @@ class Database{
     this._db = firebase.firestore();
     this._train = this._db.collection("train");
   }
+
+  saveTrain(train) {
+    this._train.doc(train.id).set(train);
+}
 
 //   async selectAllTrain() {
 //     let result = await this._train.orderBy("uebung").get();
