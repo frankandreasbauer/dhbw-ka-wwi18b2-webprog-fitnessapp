@@ -34,6 +34,7 @@ class PageTraining {
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
         pageDom.querySelector("#hinzBtn").addEventListener("click", () => this.tableButton());
+        pageDom.querySelector("#loeschBtn").addEventListener("click", () => this.myDeleteFunction());
 
         this._app.setPageTitle("Trainingsplan",{isSubPage: true});
         this._app.setPageCss(css);
@@ -42,6 +43,15 @@ class PageTraining {
 
     }
 
+  // object = this._app.firebase.selectTrainById("id1");
+  // row = table.insertRow(1);
+  // select = row.insertCell(0);
+  // kat=row.insertCell(1);
+  // uebung = row.insertCell(2);
+  // satz = row.insertCell(3);
+  // wdh = row.insertCell(4);
+  // gewicht = row.insertCell(5);
+  // select.innerHTML=this.createRadioElement(object.id)
 
 
     tableButton() {
@@ -72,7 +82,6 @@ class PageTraining {
       satz.innerHTML = document.getElementById("satz").value;
       wdh.innerHTML = document.getElementById("wdh").value;
       gewicht.innerHTML = document.getElementById("gewicht").value;
-      alert(this.count);
       this._app.firebase.saveTrain({
         id: "id"+this.count,
         kategorie: kat.innerHTML,
@@ -105,18 +114,19 @@ class PageTraining {
         alert("Tabelle ist leer");
       }
       else{
-      for (var i = 1; i < count; i++){
+      for (var i = 1; i < this.count; i++){
         if(document.getElementById("id"+i).checked != null){
         if(document.getElementById("id"+i).checked == true){
-          var del = count-i;
+          var del = this.count-i;
           document.getElementById("train-insert").deleteRow(del);
-          count = count-1;
+          this._app.firebase.deleteTrainById("id"+i);
+          this.count = this.count-1;
         }
       }
       }
 
       var table = document.getElementById("train-insert");
-      var z = count-1;
+      var z = this.count-1;
       for (var j = 1, row; row = table.rows[j]; j++) {
         row.cells[0].innerHTML="";
         row.cells[0].innerHTML=createRadioElement("id"+z);

@@ -20,6 +20,29 @@ class Firebase{
     this._train.doc(train.id).set(train);
 }
 
+async deleteTrainById(id) {
+    return this._train.doc(id).delete();
+}
+
+async selectAllTrains() {
+    let result = await this._train.orderBy("kategorie").get();
+    let trains = [];
+
+    result.forEach(entry => {
+        let train = entry.data();
+        trains.push(train);
+    });
+
+    return trains;
+}
+
+
+async selectTrainById(id) {
+    let result = await this._train.doc(id).get();
+    return result.data();
+}
+
+
 //   async selectAllTrain() {
 //     let result = await this._train.orderBy("uebung").get();
 //     let trains = [];
