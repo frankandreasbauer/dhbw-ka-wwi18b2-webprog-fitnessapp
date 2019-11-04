@@ -1,12 +1,6 @@
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 
 
-
-class Database{
+class Firebase{
   constructor(){
     firebase.initializeApp({
       apiKey: "AIzaSyD36mZGtDuNp-kk4PPaQoZyNpf8r3gfqVM",
@@ -22,8 +16,16 @@ class Database{
     this._train = this._db.collection("train");
   }
 
-  async selectAllTrain() {
-    let result = await this._train.orderBy("uebung").get();
+  saveTrain(train) {
+    this._train.doc(train.id).set(train);
+}
+
+async deleteTrainById(id) {
+    return this._train.doc(id).delete();
+}
+
+async selectAllTrains() {
+    let result = await this._train.orderBy("kategorie").get();
     let trains = [];
 
     result.forEach(entry => {
@@ -34,39 +36,58 @@ class Database{
     return trains;
 }
 
-async selectBookById(id) {
+
+async selectTrainById(id) {
     let result = await this._train.doc(id).get();
     return result.data();
 }
 
-saveBook(train) {
-    this._train.doc(train.id).set(train);
-}
 
-async deleteBookById(id) {
-    return this._train.doc(id).delete();
-}
-
-async saveBooks(trains) {
-    let batch = this._db.batch();
-
-    books.forEach(train => {
-        let dbTrain = this._train.doc(train.id);
-        batch.set(dbTrain, train);
-    });
-
-    return batch.commit();
-}
-
-async deleteBooksById(ids) {
-    let batch = this._db.batch();
-
-    ids.forEach(id => {
-        let dbTrain = this._train.doc(id);
-        batch.delete(dbTrain);
-    });
-
-    return batch.commit();
-}
+//   async selectAllTrain() {
+//     let result = await this._train.orderBy("uebung").get();
+//     let trains = [];
+//
+//     result.forEach(entry => {
+//         let train = entry.data();
+//         trains.push(train);
+//     });
+//
+//     return trains;
+// }
+//
+// async selectBookById(id) {
+//     let result = await this._train.doc(id).get();
+//     return result.data();
+// }
+//
+// saveBook(train) {
+//     this._train.doc(train.id).set(train);
+// }
+//
+// async deleteBookById(id) {
+//     return this._train.doc(id).delete();
+// }
+//
+// async saveBooks(trains) {
+//     let batch = this._db.batch();
+//
+//     books.forEach(train => {
+//         let dbTrain = this._train.doc(train.id);
+//         batch.set(dbTrain, train);
+//     });
+//
+//     return batch.commit();
+// }
+//
+// async deleteBooksById(ids) {
+//     let batch = this._db.batch();
+//
+//     ids.forEach(id => {
+//         let dbTrain = this._train.doc(id);
+//         batch.delete(dbTrain);
+//     });
+//
+//     return batch.commit();
+// }
 
 }
