@@ -22,19 +22,20 @@
   top:50%;
   left:58%;
   margin-top:+20px;
-
-/*  margin-left: 795px; */
+  margin-left: 795px; 
 
 }
 
-#mitte {
+#mittejn {
   background-color:#C0C0C0 ;
   width: 200px;
   heigt: 50px;
   position:  inherit;
   top:50%;
   left:58%;
-  margin-top:+20px;
+  margin-top: 20px;
+
+
 }
 
  #rechts{
@@ -46,6 +47,7 @@
   top:50%;
   left:58%;
   margin-top:+20px;
+
 }
 
 .linksBtn{
