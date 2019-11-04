@@ -35,12 +35,24 @@ class PagePersonalData {
         pageDom.innerHTML = html;
         pageDom.querySelector("#bmiBtn").addEventListener("click", () => this.bmiRechnen());
 
-
+        this. getAllPerDat();
         this._app.setPageTitle("Persönliche Daten",{isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
     }
+
+    async  getAllPerDat(){
+          let perDat = await this._app.firebase.selectAllPerDat("perDat");
+          perDat.forEach(perDats => {
+            document.getElementById("name").value = perDats.name;
+            document.getElementById("geschlecht").value =perDats.geschlecht;
+            document.getElementById("größe").value = perDats.groesse;
+            document.getElementById("gewicht").value = perDats.gewicht;
+            document.getElementById("bmiAusgabe").value = perDats.bmi;
+
+          });
+      }
 
     bmiRechnen() {
       var größe = document.getElementById("größe").value;
@@ -49,8 +61,9 @@ class PagePersonalData {
       bmi = bmi.toFixed(1);
       document.getElementById("bmiAusgabe").value = bmi;
       this._app.firebase.savePer({
-        id:"test1",
+        id:"idPerDat",
         name: document.getElementById("name").value,
+        bmi: bmi,
         geschlecht: document.getElementById("geschlecht").value,
         groesse: document.getElementById("größe").value,
         gewicht: document.getElementById("gewicht").value

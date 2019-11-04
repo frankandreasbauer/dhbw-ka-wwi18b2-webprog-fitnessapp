@@ -41,6 +41,18 @@ async selectAllTrains(collection) {
     return trains;
 }
 
+async selectAllPerDat(collection) {
+    let result = await this._perDat.orderBy("name").get();
+    let perDats = [];
+
+    result.forEach(entry => {
+        let perDat = entry.data();
+        perDats.push(perDat);
+    });
+
+    return perDats;
+}
+
 
 async selectTrainById(id) {
     let result = await this._train.doc(id).get();
