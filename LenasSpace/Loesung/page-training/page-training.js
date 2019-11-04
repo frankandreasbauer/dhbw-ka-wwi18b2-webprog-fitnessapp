@@ -55,6 +55,8 @@ class PageTraining {
 
 
     tableButton() {
+
+      
       var table = document.getElementById("train-insert");
       if(document.getElementById("uebung").value == ""){
       alert("Bitte alle Felder füllen");
