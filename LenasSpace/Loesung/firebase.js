@@ -14,10 +14,15 @@ class Firebase{
 
     this._db = firebase.firestore();
     this._train = this._db.collection("train");
+    this._perDat = this._db.collection("perDat");
   }
 
   saveTrain(train) {
     this._train.doc(train.id).set(train);
+}
+
+savePer(perDat) {
+  this._perDat.doc(perDat.id).set(perDat);
 }
 
 async deleteTrainById(id) {

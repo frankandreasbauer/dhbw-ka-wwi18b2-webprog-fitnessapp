@@ -48,6 +48,13 @@ class PagePersonalData {
       var bmi = gewicht / (größe / 100 * größe / 100);
       bmi = bmi.toFixed(1);
       document.getElementById("bmiAusgabe").value = bmi;
+      this._app.firebase.savePer({
+        id:"test1",
+        name: document.getElementById("name").value,
+        geschlecht: document.getElementById("geschlecht").value,
+        groesse: document.getElementById("größe").value,
+        gewicht: document.getElementById("gewicht").value
+      });
       if (bmi < 10){
       document.getElementById("bmiBewertung").value = "Bitte geben Sie korrekte Werte an.";}
       if (bmi > 10 && bmi < 20){
