@@ -15,6 +15,7 @@ class PageTarget {
     constructor(app) {
         this._app = app;
     }
+    counter = 0;
 
     /**
      * Seite anzeigen. Wird von der App-Klasse aufgerufen.
@@ -35,6 +36,8 @@ class PageTarget {
         // Seite zur Anzeige bringen
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
+        pageDom.querySelector("#links").addEventListener("click", () => this.minusCount());
+        pageDom.querySelector("#rechts").addEventListener("click", () => this.plusCount());
 
         this._app.setPageTitle("Ziele", {isSubPage: true});
         this._app.setPageCss(css);
@@ -42,17 +45,15 @@ class PageTarget {
         this._app.setPageContent(pageDom.querySelector("main"));
     }
 
+
+    minusCount(){
+      this.counter = this.counter - 1;
+      document.getElementById("mitte").value = this.counter;
+    }
+
+    plusCount(){
+      this.counter = this.counter + 1;
+      document.getElementById("mitte").value = this.counter;
+    }
+
 }
-
-var counter = 0;  //Gewicht
-
-
-$("#links").click(function(){
-  counter = counter - 1;
-  $("#mitte a").text(counter);
-});
-
-$("#rechts").click(function(){
-  counter = counter + 1;
-  $("#mitte a").text(counter);
-});

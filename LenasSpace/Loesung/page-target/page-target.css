@@ -6,6 +6,7 @@
   font-size:200%;
   line-height:50px;
   color:black;
+
 }
 
 .text {
@@ -21,19 +22,21 @@
   top:50%;
   left:58%;
   margin-top:+20px;
-  
-/*  margin-left: 795px; */
+  margin-left: 42%;
+
 
 }
 
-#mitte {
+#mittejn {
   background-color:#C0C0C0 ;
   width: 200px;
   heigt: 50px;
   position:  inherit;
   top:50%;
   left:58%;
-  margin-top:+20px;
+  margin-top: 20px;
+
+
 }
 
  #rechts{
@@ -45,6 +48,7 @@
   top:50%;
   left:58%;
   margin-top:+20px;
+
 }
 
 .linksBtn{
@@ -75,10 +79,10 @@
 }
 h3 {
   margin-top: 150px;
-  margin-left: -1000px;
+  margin-left: -52%;
 }
 table{
   border: 1px solid gray;
-  margin-left: 300px;
+  margin-left: 17%;
   background-color: white;
 }
