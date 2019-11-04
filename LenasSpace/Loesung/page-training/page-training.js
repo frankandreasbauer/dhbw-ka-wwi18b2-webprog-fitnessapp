@@ -140,7 +140,6 @@ class PageTraining {
         alert("Tabelle ist leer");
       }
       else{
-        alert(this.count);
       for (var i = 1; i < this.count; i++){
         if(document.getElementById("id"+i).checked != null){
         if(document.getElementById("id"+i).checked == true){
