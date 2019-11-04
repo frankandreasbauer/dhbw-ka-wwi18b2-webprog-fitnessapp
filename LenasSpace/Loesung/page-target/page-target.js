@@ -39,21 +39,133 @@ class PageTarget {
         pageDom.querySelector("#links").addEventListener("click", () => this.minusCount());
         pageDom.querySelector("#rechts").addEventListener("click", () => this.plusCount());
 
+        this.getGewicht();
         this._app.setPageTitle("Ziele", {isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
     }
 
+    async  getGewicht(){
+          let perDat = await this._app.firebase.selectAllPerDat("perDat");
+          perDat.forEach(perDats => {
+            document.getElementById("aktGew").value = perDats.gewicht;
+            // document.getElementById("mitte").value = perDats.gewicht;
+            this.counter =perDats.gewicht;
+          });
+           document.getElementById("mitte").value = this.counter;
+      }
+
+      setTraining()
+      {
+
+      }
+
 
     minusCount(){
       this.counter = this.counter - 1;
       document.getElementById("mitte").value = this.counter;
+
+      var z = 5;
+      var p = document.getElementById("aktGew").value - document.getElementById("mitte").value;
+
+      var table = document.getElementById("tableTrain");
+      if(document.getElementById("tableTrain").rows.length == 2){
+        document.getElementById("tableTrain").deleteRow(1);
+      }
+
+      if(document.getElementById("aktGew").value - document.getElementById("mitte").value < z)
+      {
+
+        var row = table.insertRow(1);
+        var montag = row.insertCell(0);
+        var dienstag =row.insertCell(1);
+        var mittwoch = row.insertCell(2);
+        var donnerstag = row.insertCell(3);
+        var freitag = row.insertCell(4);
+        var samstag = row.insertCell(5);
+        var sonntag = row.insertCell(6);
+        montag.innerHTML = "Krafttraining";
+        dienstag.innerHTML = "Regeneration";
+        mittwoch.innerHTML = "Krafttraining";
+        donnerstag.innerHTML = "Regeneration";
+        freitag.innerHTML = "Krafttraining";
+        samstag.innerHTML = "Regeneration";
+        sonntag.innerHTML = "Krafttraining";
+      }
+
+      if(document.getElementById("aktGew").value - document.getElementById("mitte").value >= z)
+      {
+
+        var row = table.insertRow(1);
+        var montag = row.insertCell(0);
+        var dienstag =row.insertCell(1);
+        var mittwoch = row.insertCell(2);
+        var donnerstag = row.insertCell(3);
+        var freitag = row.insertCell(4);
+        var samstag = row.insertCell(5);
+        var sonntag = row.insertCell(6);
+        montag.innerHTML = "Krafttraining";
+        dienstag.innerHTML = "Cardio";
+        mittwoch.innerHTML = "Krafttraining";
+        donnerstag.innerHTML = "Cardio";
+        freitag.innerHTML = "Krafttraining";
+        samstag.innerHTML = "Regeneration";
+        sonntag.innerHTML = "Regeneration";
+      }
     }
 
     plusCount(){
-      this.counter = this.counter + 1;
+      this.counter++;
       document.getElementById("mitte").value = this.counter;
+
+      var z = -5;
+      var p = document.getElementById("aktGew").value - document.getElementById("mitte").value;
+
+      var table = document.getElementById("tableTrain");
+      if(document.getElementById("tableTrain").rows.length == 2){
+        document.getElementById("tableTrain").deleteRow(1);
+      }
+
+      if(document.getElementById("aktGew").value - document.getElementById("mitte").value >= z)
+      {
+
+        var row = table.insertRow(1);
+        var montag = row.insertCell(0);
+        var dienstag =row.insertCell(1);
+        var mittwoch = row.insertCell(2);
+        var donnerstag = row.insertCell(3);
+        var freitag = row.insertCell(4);
+        var samstag = row.insertCell(5);
+        var sonntag = row.insertCell(6);
+        montag.innerHTML = "Krafttraining";
+        dienstag.innerHTML = "Regeneration";
+        mittwoch.innerHTML = "Krafttraining";
+        donnerstag.innerHTML = "Regeneration";
+        freitag.innerHTML = "Krafttraining";
+        samstag.innerHTML = "Regeneration";
+        sonntag.innerHTML = "Regeneration";
+      }
+
+      if(document.getElementById("aktGew").value - document.getElementById("mitte").value < z)
+      {
+
+        var row = table.insertRow(1);
+        var montag = row.insertCell(0);
+        var dienstag =row.insertCell(1);
+        var mittwoch = row.insertCell(2);
+        var donnerstag = row.insertCell(3);
+        var freitag = row.insertCell(4);
+        var samstag = row.insertCell(5);
+        var sonntag = row.insertCell(6);
+        montag.innerHTML = "Krafttraining";
+        dienstag.innerHTML = "Krafttraining";
+        mittwoch.innerHTML = "Krafttraining";
+        donnerstag.innerHTML = "Krafttraining";
+        freitag.innerHTML = "Krafttraining";
+        samstag.innerHTML = "Regeneration";
+        sonntag.innerHTML = "Regeneration";
+      }
     }
 
 }
