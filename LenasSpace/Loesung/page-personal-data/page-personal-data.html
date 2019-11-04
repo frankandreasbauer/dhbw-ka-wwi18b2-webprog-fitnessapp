@@ -11,23 +11,22 @@
   <p class= "center"> <label for="name">Name: <input type="text" id="name" name="name" required
          minlength="2" maxlength="20" size="10"></label> </p>
 
-         <form action="#" id="sexchoice">
+
          		<label> Geschlecht:
-         			<select geschlecht="geschlecht">
+         			<select geschlecht="geschlecht" id = "geschlecht">
                   <option value= "m">männlich</option>
            				<option value= "w">weiblich</option>
            				<option value= "d">divers</option>
          			</select>
          		</label>
-         	</form>
 
-  <p class= "center"> <label for="größe">Größe: <input type="number" id="größe" größe="größe" required
-         minlength ="2" maxlength="20" size="10"> cm</label> </p>
+  <p class= "center"> <label for="größe">Größe: <input type="number" id="größe" required
+         minlength ="2" maxlength="3" size="3"> cm</label> </p>
 
-  <p class= "center"> <label for="gewicht">Gewicht: <input type="number" id="gewicht" gewicht="gewicht" required
-         minlength ="2" maxlength="3" size="10"> kg</label> </p>
+  <p class= "center"> <label for="gewicht">Gewicht: <input type="number" id="gewicht" required
+         minlength ="2" maxlength="3" size="3"> kg</label> </p>
 
-  <p class= "center"> <label for="bmi"> Ihr Body-Mass-Index BMI beträgt: </label>
-    <script>
-  berechneBMI(größe, gewicht);
-  </script>
+    <button id = "bmiBtn">BMI berechnen</button>
+
+    <p><span>Ihr BMI beträgt:</span> <output id="bmiAusgabe">0</output> kg/m²</p>
+    <output id = "bmiBewertung"></output>
