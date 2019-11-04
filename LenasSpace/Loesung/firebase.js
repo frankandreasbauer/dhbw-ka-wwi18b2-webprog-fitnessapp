@@ -24,7 +24,7 @@ async deleteTrainById(id) {
     return this._train.doc(id).delete();
 }
 
-async selectAllTrains() {
+async selectAllTrains(collection) {
     let result = await this._train.orderBy("kategorie").get();
     let trains = [];
 

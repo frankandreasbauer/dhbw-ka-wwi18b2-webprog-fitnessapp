@@ -34,8 +34,11 @@ class PageTraining {
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
         pageDom.querySelector("#hinzBtn").addEventListener("click", () => this.tableButton());
+        // pageDom.querySelector("#hinzBtn").addEventListener("click", () => this.getAllTrains());
         pageDom.querySelector("#loeschBtn").addEventListener("click", () => this.myDeleteFunction());
+        // pageDom.querySelector("#loeschBtn").addEventListener("click", () => this.getAllTrains());
 
+        this.getAllTrains();
         this._app.setPageTitle("Trainingsplan",{isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
@@ -56,7 +59,7 @@ class PageTraining {
 
     tableButton() {
 
-      
+
       var table = document.getElementById("train-insert");
       if(document.getElementById("uebung").value == ""){
       alert("Bitte alle Felder füllen");
@@ -101,6 +104,27 @@ class PageTraining {
       }
     }
 
+    async  getAllTrains(){
+          let training = await this._app.firebase.selectAllTrains("train");
+          var table = document.getElementById("train-insert");
+          training.forEach(trainings => {
+            this.count = this.count+1;
+            var row = table.insertRow(1);
+            var select = row.insertCell(0);
+            var kat=row.insertCell(1);
+            var uebung = row.insertCell(2);
+            var satz = row.insertCell(3);
+            var wdh = row.insertCell(4);
+            var gewicht = row.insertCell(5);
+            select.innerHTML = this.createRadioElement(trainings.id);
+            kat.innerHTML = trainings.kategorie;
+            uebung.innerHTML = trainings.uebung;
+            satz.innerHTML = trainings.satz;
+            wdh.innerHTML = trainings.wdh;
+            gewicht.innerHTML = trainings.gewicht;
+          });
+      }
+
     createRadioElement(name, checked) {
           var radioHtml = '<input type="checkbox" id="' + name + '"';
           if ( checked ) {
@@ -116,11 +140,13 @@ class PageTraining {
         alert("Tabelle ist leer");
       }
       else{
+        alert(this.count);
       for (var i = 1; i < this.count; i++){
         if(document.getElementById("id"+i).checked != null){
         if(document.getElementById("id"+i).checked == true){
           var del = this.count-i;
           document.getElementById("train-insert").deleteRow(del);
+
           this._app.firebase.deleteTrainById("id"+i);
           this.count = this.count-1;
         }
@@ -131,7 +157,7 @@ class PageTraining {
       var z = this.count-1;
       for (var j = 1, row; row = table.rows[j]; j++) {
         row.cells[0].innerHTML="";
-        row.cells[0].innerHTML=createRadioElement("id"+z);
+        row.cells[0].innerHTML=this.createRadioElement("id"+z);
         z = z-1;
       }
       }
