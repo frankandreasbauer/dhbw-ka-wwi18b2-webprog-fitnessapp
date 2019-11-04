@@ -63,4 +63,5 @@ class PagePersonalData {
       if (bmi > 100){
       document.getElementById("bmiBewertung").value = "Bitte geben Sie korrekte Werte an.";}
       }
+
 }
