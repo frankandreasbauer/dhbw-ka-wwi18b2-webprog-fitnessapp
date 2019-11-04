@@ -13,6 +13,3 @@ input{ font-size: 1rem; },
 label {
     margin: .4rem 0;
 }
-
-/* Aussehen der Dropdown-Liste `*/
-.option { font-size: 100px; }
