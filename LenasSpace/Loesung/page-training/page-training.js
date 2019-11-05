@@ -77,7 +77,7 @@ class PageTraining {
   }
 
 
-    tableButton() {
+    async tableButton() {
       var table = document.getElementById("train-insert");
       if(document.getElementById("uebung").value == ""){
       alert("Bitte alle Felder füllen");
@@ -95,6 +95,12 @@ class PageTraining {
     //   alert("Bitte alle Felder füllen");
     // }
     else {
+      let training = await this._app.firebase.selectAllTrains("train");
+      training.forEach(trainings => {
+        if(trainings.id == "id"+this.count){
+          this.count = this.count+1;
+        }
+      });
       var row = table.insertRow(1);
       var select = row.insertCell(0);
       var kat=row.insertCell(1);
