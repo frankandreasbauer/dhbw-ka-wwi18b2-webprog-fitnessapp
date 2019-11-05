@@ -37,6 +37,7 @@ class PageTraining {
         // pageDom.querySelector("#hinzBtn").addEventListener("click", () => this.getAllTrains());
         pageDom.querySelector("#loeschBtn").addEventListener("click", () => this.myDeleteFunction());
         // pageDom.querySelector("#loeschBtn").addEventListener("click", () => this.getAllTrains());
+        pageDom.querySelector("#kategorie").addEventListener("click", () => this.kategorieSwitch());
 
         this.getAllTrains();
         this._app.setPageTitle("Trainingsplan",{isSubPage: true});
@@ -55,11 +56,21 @@ class PageTraining {
   // wdh = row.insertCell(4);
   // gewicht = row.insertCell(5);
   // select.innerHTML=this.createRadioElement(object.id)
+  kategorieSwitch(){
+    if(document.getElementById("kategorie").value == "Cardio"){
+      document.getElementById("satz").placeholder = "Entfernung in m";
+      document.getElementById("wdh").placeholder="Zeit";
+      document.getElementById("gewicht").style.display="none";
+  }else if(document.getElementById("kategorie").value == "Kraft"){
+    document.getElementById("satz").placeholder = "Sätze";
+    document.getElementById("wdh").placeholder="Wiederholungen";
+    document.getElementById("gewicht").style.display="inherit";
+  }
+
+  }
 
 
     tableButton() {
-
-
       var table = document.getElementById("train-insert");
       if(document.getElementById("uebung").value == ""){
       alert("Bitte alle Felder füllen");
@@ -67,12 +78,15 @@ class PageTraining {
     else if(document.getElementById("satz").value ==""){
       alert("Bitte alle Felder füllen");
     }
+    else if(document.getElementById("kategorie").value ==""){
+      alert("Bitte alle Felder füllen");
+    }
     else if(document.getElementById("wdh").value ==""){
       alert("Bitte alle Felder füllen");
     }
-    else if(document.getElementById("gewicht").value ==""){
-      alert("Bitte alle Felder füllen");
-    }
+    // else if(document.getElementById("gewicht").value ==""){
+    //   alert("Bitte alle Felder füllen");
+    // }
     else {
       var row = table.insertRow(1);
       var select = row.insertCell(0);
@@ -84,9 +98,21 @@ class PageTraining {
       select.innerHTML = this.createRadioElement("id"+this.count,false);
       kat.innerHTML = document.getElementById("kategorie").value;
       uebung.innerHTML = document.getElementById("uebung").value;
-      satz.innerHTML = document.getElementById("satz").value;
-      wdh.innerHTML = document.getElementById("wdh").value;
-      gewicht.innerHTML = document.getElementById("gewicht").value;
+      if(document.getElementById("kategorie").value == "Cardio")
+      {
+        satz.innerHTML = document.getElementById("satz").value+"m";
+      }else{
+          satz.innerHTML = document.getElementById("satz").value;
+      }
+
+      if(document.getElementById("kategorie").value == "Cardio")
+      {
+      satz.innerHTML = document.getElementById("wdh").value+"min";
+      }
+      else{
+        wdh.innerHTML = document.getElementById("wdh").value;
+      }
+      gewicht.innerHTML = document.getElementById("gewicht").value + "Kg";
       this._app.firebase.saveTrain({
         id: "id"+this.count,
         kategorie: kat.innerHTML,

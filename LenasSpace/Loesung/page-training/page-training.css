@@ -91,6 +91,42 @@ button {
        background-color:#454647;
     }
 
+
+.input{
+  position: relative;
+  font-size: 0.5em;
+  background: linear-gradient(21deg, #10abff,#1beabd);
+  padding: 0.188em;
+  display: inline-block;
+  border-radius: 9999em;
+  z-index: 0;
+  box-shadow: inset 0 0 0 0.188em #ffff,
+  0 0 0 0.250em #ffff,
+0.188em -0.188em 1.875em  #9BAEFD,
+-0.188em 0.188em 1.875em  #9BAEFD;
+margin: 1.5em;
+}
+
+input{
+  position: relative;
+  display: inherit;
+  border-radius: inherit;
+  margin: 0;
+  border: none;
+  outline: none;
+  padding: 0.325em;
+  z-index: 1;
+}
+
+input:focus{
+  opacity: 1;
+  transform: scale(1);
+}
+
+#kategorie{
+  border: none;
+}
+
     /* #train-insert{ */
       /* text-align: left;
       border-color: red;
