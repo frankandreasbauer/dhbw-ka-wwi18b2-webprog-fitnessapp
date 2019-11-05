@@ -30,7 +30,7 @@ async deleteTrainById(id) {
 }
 
 async selectAllTrains(collection) {
-    let result = await this._train.orderBy("kategorie").get();
+    let result = await this._train.orderBy("id").get();
     let trains = [];
 
     result.forEach(entry => {

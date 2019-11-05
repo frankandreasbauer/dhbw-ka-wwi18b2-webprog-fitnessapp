@@ -58,13 +58,20 @@ class PageTraining {
   // select.innerHTML=this.createRadioElement(object.id)
   kategorieSwitch(){
     if(document.getElementById("kategorie").value == "Cardio"){
+      document.getElementById("satz").style.display="inherit";
       document.getElementById("satz").placeholder = "Entfernung in m";
       document.getElementById("wdh").placeholder="Zeit";
       document.getElementById("gewicht").style.display="none";
   }else if(document.getElementById("kategorie").value == "Kraft"){
+    document.getElementById("satz").style.display="inherit";
     document.getElementById("satz").placeholder = "Sätze";
     document.getElementById("wdh").placeholder="Wiederholungen";
     document.getElementById("gewicht").style.display="inherit";
+  }
+  else if(document.getElementById("kategorie").value == "Regeneration"){
+    document.getElementById("satz").style.display="none";
+    document.getElementById("wdh").placeholder="Zeit in min";
+    document.getElementById("gewicht").style.display="none";
   }
 
   }
@@ -75,9 +82,9 @@ class PageTraining {
       if(document.getElementById("uebung").value == ""){
       alert("Bitte alle Felder füllen");
     }
-    else if(document.getElementById("satz").value ==""){
-      alert("Bitte alle Felder füllen");
-    }
+    // else if(document.getElementById("satz").value ==""){
+    //   alert("Bitte alle Felder füllen");
+    // }
     else if(document.getElementById("kategorie").value ==""){
       alert("Bitte alle Felder füllen");
     }
@@ -102,17 +109,18 @@ class PageTraining {
       {
         satz.innerHTML = document.getElementById("satz").value+"m";
         gewicht.innerHTML = "-";
-      }else{
-          satz.innerHTML = document.getElementById("satz").value;
-          gewicht.innerHTML = document.getElementById("gewicht").value + "Kg";
-      }
+        wdh.innerHTML = document.getElementById("wdh").value+"min";
 
-      if(document.getElementById("kategorie").value == "Cardio")
+      }else if(document.getElementById("kategorie").value == "Regeneration")
       {
-      wdh.innerHTML = document.getElementById("wdh").value+"min";
+        wdh.innerHTML = document.getElementById("wdh").value+"min";
+        gewicht.innerHTML = "-";
+        satz.innerHTML = "-";
       }
       else{
-        wdh.innerHTML = document.getElementById("wdh").value;
+          wdh.innerHTML = document.getElementById("wdh").value;
+          satz.innerHTML = document.getElementById("satz").value;
+          gewicht.innerHTML = document.getElementById("gewicht").value + "Kg";
       }
       this._app.firebase.saveTrain({
         id: "id"+this.count,
@@ -162,30 +170,51 @@ class PageTraining {
       }
 
 
-    myDeleteFunction() {
+async   myDeleteFunction() {
+      alert(this.count + " 1");
       if(document.getElementById("train-insert").rows.length == 1){
         alert("Tabelle ist leer");
       }
       else{
-      for (var i = 1; i < this.count; i++){
-        if(document.getElementById("id"+i).checked != null){
+        alert(this.count+ " 2");
+        var reihen = 0;
+      for (var i = this.count; i>=1; i--){
+        alert(i);
+
+        if(document.getElementById("id"+i) != null){
+          reihen = reihen + 1;
         if(document.getElementById("id"+i).checked == true){
-          var del = this.count-i;
-          document.getElementById("train-insert").deleteRow(del);
-
+          alert(reihen +" REIHEN");
+          // var del = this.count;
+          // del = del-i;
+          // alert(this.count+"count 3");
+          // alert(i +"i")
+          alert(document.getElementById("id"+i).checked +" unangenehm");
+          document.getElementById("train-insert").deleteRow(reihen);
           this._app.firebase.deleteTrainById("id"+i);
-          this.count = this.count-1;
+
+          // this.count = this.count-1;
         }
-      }
+
+
+
       }
 
-      var table = document.getElementById("train-insert");
-      var z = this.count-1;
+    }
+      reihen = 0;
+      this.count = this.count-1;
+      alert(this.count+" 4");
+
+      var z = this.count;
+      z = z-1;
+      alert(this.count+" 5");
       for (var j = 1, row; row = table.rows[j]; j++) {
         row.cells[0].innerHTML="";
         row.cells[0].innerHTML=this.createRadioElement("id"+z);
         z = z-1;
       }
+
+      alert(this.count+ " 6");
       }
     }
 
