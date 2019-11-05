@@ -6,19 +6,31 @@
   font-size:200%;
   line-height:100px;
   color:black;
+  width: 50px;
+  height:50px;
+}
+div {
+   font-size: 30px;
+}
+
+p {
+   font-size: 30px;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+h2 {
+   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 
 }
 
-.text {
+/*.text {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   color: black;
-
-
 }
 .aktGew{
   text-align: center;
   background-image: #9BAEFD;
-}
+} */
 
 #links {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
@@ -30,7 +42,10 @@
   top:50%;
   left:58%;
   margin-top:+20px;
- align-items: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+
 }
 
 #mittejn {
@@ -42,10 +57,14 @@
   top:50%;
   left:58%;
   margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+
 }
 
  #rechts{
-   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   background-color: #9BAEFD;
   cursor: pointer;
   width: 50px;
@@ -54,6 +73,8 @@
   top:50%;
   left:58%;
   margin-top:+20px;
+  padding-left: 10px;
+  padding-right: 10px;
 
 }
 
