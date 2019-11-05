@@ -96,6 +96,7 @@ class PageTraining {
     // }
     else {
       let training = await this._app.firebase.selectAllTrains("train");
+      //hier nochmal drüberschauen wegen hinzufügen
       training.forEach(trainings => {
         if(trainings.id == "id"+this.count){
           this.count = this.count+1;
