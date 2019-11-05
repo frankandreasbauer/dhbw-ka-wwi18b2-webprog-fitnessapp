@@ -4,7 +4,7 @@
   text-align: center;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   font-size:200%;
-  line-height:50px;
+  line-height:100px;
   color:black;
 
 }
@@ -12,6 +12,11 @@
 .text {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   color: black;
+
+}
+.aktGew{
+  text-align: center;
+  background-image: #9BAEFD;
 }
 
 #links {
@@ -25,22 +30,17 @@
   left:58%;
   margin-top:+20px;
  align-items: center;
-
-
-
 }
 
 #mittejn {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   background-color:#C0C0C0 ;
   width: 200px;
-  heigt: 50px;
+  heigt: 100px;
   position:  inherit;
   top:50%;
   left:58%;
   margin-top: 20px;
-
-
 }
 
  #rechts{
@@ -83,8 +83,8 @@
   color:black;
 }
 h3 {
-  margin-top: 150px;
-  margin-left: -52%;
+  margin-top: 130px;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 /* table{
   border: 1px solid gray;
