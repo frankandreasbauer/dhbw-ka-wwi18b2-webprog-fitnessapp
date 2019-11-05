@@ -10,10 +10,12 @@
 }
 
 .text {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   color: black;
 }
 
 #links {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   background-color: #9BAEFD;
   cursor: pointer;
   width: 50px;
@@ -29,6 +31,7 @@
 }
 
 #mittejn {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   background-color:#C0C0C0 ;
   width: 200px;
   heigt: 50px;
@@ -41,6 +44,7 @@
 }
 
  #rechts{
+   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   background-color: #9BAEFD;
   cursor: pointer;
   width: 50px;
@@ -89,6 +93,7 @@ h3 {
 } */
 
  #tableTrain{
+   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
@@ -101,12 +106,14 @@ h3 {
 }
 
 #tableTrain th{
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     text-align: center;
     background-color: #9BAEFD;
 }
 
 
 #tableTrain{
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
@@ -116,20 +123,25 @@ h3 {
   background-color: white;
 }
 #tableTrain td{
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 border: 1px solid #9BAEFD;
 }
 
 #tableTrain tr:first-child th {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-top: 0;
 }
 #tableTrain tr:last-child td {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-bottom: 0;
 }
 #tableTrain tr td:first-child,
 #tableTrain tr th:first-child {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-left: 0;
 }
 #tableTrain tr td:last-child,
 #tableTrain tr th:last-child {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-right: 0;
 }

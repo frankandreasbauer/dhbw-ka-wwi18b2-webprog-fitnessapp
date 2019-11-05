@@ -7,11 +7,14 @@
 label {
     display: block;
     font: 1rem 'Fira Sans', sans-serif;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
-input{ font-size: 1rem; },
+input{ font-size: 1rem;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif; },
 label {
     margin: .4rem 0;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
 button {
@@ -28,6 +31,7 @@ button {
     overflow: hidden;
     z-index: 1;
     background-color: #a0a2a3;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     }
 
     button:hover{

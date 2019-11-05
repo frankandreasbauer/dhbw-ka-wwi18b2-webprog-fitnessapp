@@ -101,18 +101,19 @@ class PageTraining {
       if(document.getElementById("kategorie").value == "Cardio")
       {
         satz.innerHTML = document.getElementById("satz").value+"m";
+        gewicht.innerHTML = "-";
       }else{
           satz.innerHTML = document.getElementById("satz").value;
+          gewicht.innerHTML = document.getElementById("gewicht").value + "Kg";
       }
 
       if(document.getElementById("kategorie").value == "Cardio")
       {
-      satz.innerHTML = document.getElementById("wdh").value+"min";
+      wdh.innerHTML = document.getElementById("wdh").value+"min";
       }
       else{
         wdh.innerHTML = document.getElementById("wdh").value;
       }
-      gewicht.innerHTML = document.getElementById("gewicht").value + "Kg";
       this._app.firebase.saveTrain({
         id: "id"+this.count,
         kategorie: kat.innerHTML,
