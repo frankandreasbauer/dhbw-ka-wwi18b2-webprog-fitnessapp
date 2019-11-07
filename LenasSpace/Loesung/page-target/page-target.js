@@ -131,11 +131,11 @@ class PageTarget {
         var sonntag = row.insertCell(6);
         montag.innerHTML = "Krafttraining";
         dienstag.innerHTML = "Cardio";
-        mittwoch.innerHTML = "Krafttraining";
+        mittwoch.innerHTML = "Regeneration";
         donnerstag.innerHTML = "Cardio";
         freitag.innerHTML = "Krafttraining";
         samstag.innerHTML = "Regeneration";
-        sonntag.innerHTML = "Regeneration";
+        sonntag.innerHTML = "Krafttraining";
       }
     }
     this.counter = this.counter - 1;
@@ -195,10 +195,10 @@ class PageTarget {
         var sonntag = row.insertCell(6);
         montag.innerHTML = "Krafttraining";
         dienstag.innerHTML = "Krafttraining";
-        mittwoch.innerHTML = "Krafttraining";
+        mittwoch.innerHTML = "Regeneration";
         donnerstag.innerHTML = "Krafttraining";
         freitag.innerHTML = "Krafttraining";
-        samstag.innerHTML = "Regeneration";
+        samstag.innerHTML = "Krafttraining";
         sonntag.innerHTML = "Regeneration";
       }
     }
