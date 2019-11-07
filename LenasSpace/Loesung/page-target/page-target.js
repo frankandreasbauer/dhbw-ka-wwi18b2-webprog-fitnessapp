@@ -17,6 +17,7 @@ class PageTarget {
     }
     counter = 0;
 
+
     /**
      * Seite anzeigen. Wird von der App-Klasse aufgerufen.
      */
@@ -51,28 +52,50 @@ class PageTarget {
           perDat.forEach(perDats => {
             document.getElementById("aktGew").value = perDats.gewicht;
             // document.getElementById("mitte").value = perDats.gewicht;
-            this.counter =perDats.gewicht;
+          });
+
+          let wuGew = await this._app.firebase.selectAllWuGew("wunschGew");
+          wuGew.forEach(wugew => {
+            if(wugew.wugew == "0")
+            {
+              document.getElementById("mitte").value = document.getElementById("aktGew").value;
+              this.counter = document.getElementById("aktGew").value;
+            }
+            else{
+            document.getElementById("mitte").value = wugew.wugew;
+            this.counter =wugew.wugew;
+            var table = document.getElementById("tableTrain");
+            var row = table.insertRow(1);
+            var montag = row.insertCell(0);
+            var dienstag =row.insertCell(1);
+            var mittwoch = row.insertCell(2);
+            var donnerstag = row.insertCell(3);
+            var freitag = row.insertCell(4);
+            var samstag = row.insertCell(5);
+            var sonntag = row.insertCell(6);
+            montag.innerHTML = wugew.montag;
+            dienstag.innerHTML = wugew.dienstag;
+            mittwoch.innerHTML = wugew.mittwoch;
+            donnerstag.innerHTML = wugew.donnerstag;
+            freitag.innerHTML = wugew.freitag;
+            samstag.innerHTML = wugew.samstag;
+            sonntag.innerHTML = wugew.sonntag;
+
+          }
           });
            document.getElementById("mitte").value = this.counter;
       }
 
-      setTraining()
-      {
-
-      }
-
 
     minusCount(){
-      this.counter = this.counter - 1;
-      document.getElementById("mitte").value = this.counter;
-
       var z = 5;
       var p = document.getElementById("aktGew").value - document.getElementById("mitte").value;
-
+      if(document.getElementById("mitte").value <= document.getElementById("aktGew").value){
       var table = document.getElementById("tableTrain");
       if(document.getElementById("tableTrain").rows.length == 2){
         document.getElementById("tableTrain").deleteRow(1);
       }
+
 
       if(document.getElementById("aktGew").value - document.getElementById("mitte").value < z)
       {
@@ -92,9 +115,10 @@ class PageTarget {
         freitag.innerHTML = "Krafttraining";
         samstag.innerHTML = "Regeneration";
         sonntag.innerHTML = "Krafttraining";
+
       }
 
-      if(document.getElementById("aktGew").value - document.getElementById("mitte").value >= z)
+    else  if(document.getElementById("aktGew").value - document.getElementById("mitte").value >= z)
       {
 
         var row = table.insertRow(1);
@@ -114,14 +138,25 @@ class PageTarget {
         sonntag.innerHTML = "Regeneration";
       }
     }
+    this.counter = this.counter - 1;
+    document.getElementById("mitte").value = this.counter;
+    this._app.firebase.saveWuGe({
+      id:"idWuGew",
+      wugew:document.getElementById("mitte").value,
+      montag: montag.innerHTML,
+      dienstag: dienstag.innerHTML,
+      mittwoch:mittwoch.innerHTML,
+      donnerstag:donnerstag.innerHTML,
+      freitag:freitag.innerHTML,
+      samstag:samstag.innerHTML,
+      sonntag:sonntag.innerHTML
+    });
+    }
 
     plusCount(){
-      this.counter++;
-      document.getElementById("mitte").value = this.counter;
-
       var z = -5;
       var p = document.getElementById("aktGew").value - document.getElementById("mitte").value;
-
+      if(document.getElementById("mitte").value >= document.getElementById("aktGew").value){
       var table = document.getElementById("tableTrain");
       if(document.getElementById("tableTrain").rows.length == 2){
         document.getElementById("tableTrain").deleteRow(1);
@@ -147,7 +182,7 @@ class PageTarget {
         sonntag.innerHTML = "Regeneration";
       }
 
-      if(document.getElementById("aktGew").value - document.getElementById("mitte").value < z)
+    else  if(document.getElementById("aktGew").value - document.getElementById("mitte").value < z)
       {
 
         var row = table.insertRow(1);
@@ -167,5 +202,19 @@ class PageTarget {
         sonntag.innerHTML = "Regeneration";
       }
     }
+    this.counter++;
+    document.getElementById("mitte").value = this.counter;
+    this._app.firebase.saveWuGe({
+      id:"idWuGew",
+      wugew:document.getElementById("mitte").value,
+      montag: montag.innerHTML,
+      dienstag: dienstag.innerHTML,
+      mittwoch:mittwoch.innerHTML,
+      donnerstag:donnerstag.innerHTML,
+      freitag:freitag.innerHTML,
+      samstag:samstag.innerHTML,
+      sonntag:sonntag.innerHTML
+    });
+  }
 
 }

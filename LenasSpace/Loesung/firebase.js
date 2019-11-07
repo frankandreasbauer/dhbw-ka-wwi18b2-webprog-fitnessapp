@@ -15,6 +15,7 @@ class Firebase{
     this._db = firebase.firestore();
     this._train = this._db.collection("train");
     this._perDat = this._db.collection("perDat");
+    this._wunschGew = this._db.collection("wunschGew");
   }
 
   saveTrain(train) {
@@ -23,6 +24,9 @@ class Firebase{
 
 savePer(perDat) {
   this._perDat.doc(perDat.id).set(perDat);
+}
+saveWuGe(wugew) {
+  this._wunschGew.doc(wugew.id).set(wugew);
 }
 
 async deleteTrainById(id) {
@@ -51,6 +55,18 @@ async selectAllPerDat(collection) {
     });
 
     return perDats;
+}
+
+async selectAllWuGew(collection) {
+    let result = await this._wunschGew.orderBy("wugew").get();
+    let wuGews = [];
+
+    result.forEach(entry => {
+        let wuGew = entry.data();
+        wuGews.push(wuGew);
+    });
+
+    return wuGews;
 }
 
 
