@@ -12,6 +12,18 @@
 
 } */
 
+.leftPic{
+  float:left;
+  z-index: -5;
+  margin-top: -13em;
+}
+
+.rightPic{
+  float:right;
+  z-index: -5;
+  margin-top: -13em;
+}
+
 button {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     display: inline-block;
@@ -26,11 +38,12 @@ button {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background-color: #a0a2a3;
+    /* background-color: #a0a2a3; */
+    background-color: #6D87C5;
     }
 
     button:hover{
-       background-color:#454647;
+       background-color:#a0a2a3;
     }
 .buttons{
     display: inline-grid;

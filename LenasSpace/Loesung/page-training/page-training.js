@@ -178,25 +178,20 @@ class PageTraining {
 
 
 async   myDeleteFunction() {
-      alert(this.count + " 1");
       if(document.getElementById("train-insert").rows.length == 1){
         alert("Tabelle ist leer");
       }
       else{
-        alert(this.count+ " 2");
         var reihen = 0;
       for (var i = this.count; i>=1; i--){
-        alert(i);
 
         if(document.getElementById("id"+i) != null){
           reihen = reihen + 1;
         if(document.getElementById("id"+i).checked == true){
-          alert(reihen +" REIHEN");
           // var del = this.count;
           // del = del-i;
           // alert(this.count+"count 3");
           // alert(i +"i")
-          alert(document.getElementById("id"+i).checked +" unangenehm");
           document.getElementById("train-insert").deleteRow(reihen);
           this._app.firebase.deleteTrainById("id"+i);
 
@@ -210,18 +205,14 @@ async   myDeleteFunction() {
     }
       reihen = 0;
       this.count = this.count-1;
-      alert(this.count+" 4");
 
       var z = this.count;
       z = z-1;
-      alert(this.count+" 5");
       for (var j = 1, row; row = table.rows[j]; j++) {
         row.cells[0].innerHTML="";
         row.cells[0].innerHTML=this.createRadioElement("id"+z);
         z = z-1;
       }
-
-      alert(this.count+ " 6");
       }
     }
 
