@@ -68,6 +68,10 @@ class PagePersonalData {
         groesse: document.getElementById("größe").value,
         gewicht: document.getElementById("gewicht").value
       });
+      this._app.firebase.saveWuGe({
+        id:"idWuGew",
+        wugew:"0"
+      });
       if (bmi < 10){
       document.getElementById("bmiBewertung").value = "Bitte geben Sie korrekte Werte an.";}
       if (bmi > 10 && bmi < 20){

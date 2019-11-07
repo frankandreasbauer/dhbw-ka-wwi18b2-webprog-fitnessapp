@@ -4,20 +4,25 @@
 </header>
 
 <main>
-<h2>Aktuelles Gewicht:</h2>
-<p class="kg"><output id="aktGew" type="number" aktuellesGewicht="" value="" readonly> </output> kg</p>
+  <div class="divAkt">
+    <h2>Aktuelles Gewicht:</h2>
+    <p class="kg"><output id="aktGew" type="number" aktuellesGewicht="" value="" readonly> </output> kg</p>
+  </div>
 
+
+<div class="divWu">
 <h2>Mein Wunschgewicht:</h2>
-
 <p class="kg">
 <div id="box">
   <a class="linksBtn" id="links">-</a>
   <output id="mitte">0</output> kg<!--Gewicht von persönlichen Daten-->
   <a class="rechtsBtn"  id="rechts">+</a>
 </div></p>
+</div>
+
+
+<div class="divTab">
 <h3>Dein Trainingsplan:</h3>
-
-
 <table id=tableTrain>
     <th>
        Montag
@@ -41,3 +46,4 @@
       Sonntag
     </th>
 </table>
+</div>
