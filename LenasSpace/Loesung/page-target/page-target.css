@@ -1,21 +1,20 @@
 
 .divAkt{
   float: left;
+    margin-top: -2em;
+
 }
 
 .divWu{
   float:right;
+  margin-top: -2em;
 }
 
 .divTab{
 bottom: 2em;
-<<<<<<< HEAD
-margin-top:-8em;
+margin-top:0em;
 z-index: 2;
-=======
 float:left;
-margin-top:-8em;
->>>>>>> 762c272717fd68b38962ddd94f4dba3a0d25380d
 }
 
 
@@ -129,10 +128,7 @@ h2 {
   color:black;
 }
 h3 {
-  font-size: 0.5em;
-  margin-top: 15em;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-  z-index: 1;
 }
 /* table{
   border: 1px solid gray;
@@ -149,7 +145,6 @@ h3 {
   margin: 0 auto;
   position: relative;
   border-collapse: collapse;
-
   table-layout: fixed;
 
 }
