@@ -44,15 +44,16 @@ class PageTarget {
 
 }
 
-var counter = 0;  //Gewicht
-
-
-$("#links").click(function(){
-  counter = counter - 1;
-  $("#mitte a").text(counter);
-});
-
-$("#rechts").click(function(){
-  counter = counter + 1;
-  $("#mitte a").text(counter);
-});
+//
+// var counter = 0;  //Gewicht
+//
+//
+// $("#links").click(function(){
+//   counter = counter - 1;
+//   $("#mitte a").text(counter);
+// });
+//
+// $("#rechts").click(function(){
+//   counter = counter + 1;
+//   $("#mitte a").text(counter);
+// });
