@@ -14,7 +14,7 @@
   margin: 0 auto;
   position: relative;
   border-collapse: collapse;
-
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   table-layout: fixed;
 
 }
@@ -22,6 +22,7 @@
 #train-insert th{
     text-align: center;
     background-color: #9BAEFD;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
 
@@ -33,23 +34,29 @@
   position: relative;
   border-collapse: collapse;
   background-color: white;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 #train-insert td{
 border: 1px solid #9BAEFD;
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
 #train-insert tr:first-child th {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-top: 0;
 }
 #train-insert tr:last-child td {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-bottom: 0;
 }
 #train-insert tr td:first-child,
 #train-insert tr th:first-child {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-left: 0;
 }
 #train-insert tr td:last-child,
 #train-insert tr th:last-child {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   border-right: 0;
 }
 
@@ -84,12 +91,53 @@ button {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    background-color: #a0a2a3;
+background-color: #6D87C5;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     }
 
     button:hover{
-       background-color:#454647;
+      background-color:#a0a2a3;
     }
+
+
+.input{
+  position: relative;
+  font-size: 0.5em;
+  background: linear-gradient(21deg, #10abff,#1beabd);
+  padding: 0.188em;
+  display: inline-block;
+  border-radius: 9999em;
+  z-index: 0;
+  box-shadow: inset 0 0 0 0.188em #ffff,
+  0 0 0 0.250em #ffff,
+0.188em -0.188em 1.875em  #9BAEFD,
+-0.188em 0.188em 1.875em  #9BAEFD;
+margin: 1.5em;
+font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+input{
+  position: relative;
+  display: inherit;
+  border-radius: inherit;
+  margin: 0;
+  border: none;
+  outline: none;
+  padding: 0.325em;
+  z-index: 1;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+input:focus{
+  opacity: 1;
+  transform: scale(1);
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+#kategorie{
+  border: none;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
 
     /* #train-insert{ */
       /* text-align: left;

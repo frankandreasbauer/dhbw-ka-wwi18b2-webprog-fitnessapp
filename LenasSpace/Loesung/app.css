@@ -19,7 +19,7 @@ html, body {
 }
 
 html {
-    font-family: "Rubik", sans-serif;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     font-size: 14pt;
     line-height: 1.6;
 
@@ -107,16 +107,19 @@ header nav a:visited {
 }
 
 header nav a:hover {
-    color: var(--icon-color);
+    /* color: var(--icon-color); */
+    color:  #9BAEFD;
 }
 
 header nav a i,
 header nav a:visited i {
-    color: var(--icon-color);
+    /* color: var(--icon-color); */
+    color:white;
 }
 
 header nav a:hover i {
-    color: var(--text-color);
+    /* color: var(--text-color); */
+    color:  #9BAEFD;
 }
 
 /* Linkes Menü */
