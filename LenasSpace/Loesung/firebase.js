@@ -1,12 +1,6 @@
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 
 
-
-class Database{
+class Firebase{
   constructor(){
     firebase.initializeApp({
       apiKey: "AIzaSyD36mZGtDuNp-kk4PPaQoZyNpf8r3gfqVM",
@@ -20,7 +14,67 @@ class Database{
 
     this._db = firebase.firestore();
     this._train = this._db.collection("train");
+    this._perDat = this._db.collection("perDat");
+    this._wunschGew = this._db.collection("wunschGew");
   }
+
+  saveTrain(train) {
+    this._train.doc(train.id).set(train);
+}
+
+savePer(perDat) {
+  this._perDat.doc(perDat.id).set(perDat);
+}
+saveWuGe(wugew) {
+  this._wunschGew.doc(wugew.id).set(wugew);
+}
+
+async deleteTrainById(id) {
+    return this._train.doc(id).delete();
+}
+
+async selectAllTrains(collection) {
+    let result = await this._train.orderBy("id").get();
+    let trains = [];
+
+    result.forEach(entry => {
+        let train = entry.data();
+        trains.push(train);
+    });
+
+    return trains;
+}
+
+async selectAllPerDat(collection) {
+    let result = await this._perDat.orderBy("name").get();
+    let perDats = [];
+
+    result.forEach(entry => {
+        let perDat = entry.data();
+        perDats.push(perDat);
+    });
+
+    return perDats;
+}
+
+async selectAllWuGew(collection) {
+    let result = await this._wunschGew.orderBy("wugew").get();
+    let wuGews = [];
+
+    result.forEach(entry => {
+        let wuGew = entry.data();
+        wuGews.push(wuGew);
+    });
+
+    return wuGews;
+}
+
+
+async selectTrainById(id) {
+    let result = await this._train.doc(id).get();
+    return result.data();
+}
+
 
 //   async selectAllTrain() {
 //     let result = await this._train.orderBy("uebung").get();
