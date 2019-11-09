@@ -1,18 +1,61 @@
+
+.divAkt{
+  float: left;
+    margin-top: -2em;
+
+}
+
+.divWu{
+  float:right;
+  margin-top: -2em;
+}
+
+.divTab{
+bottom: 2em;
+margin-top:0em;
+z-index: 2;
+float:left;
+}
+
+
+
 .box {
   background-color: grey;
   float: left;
   text-align: center;
-  font-family: arial;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   font-size:200%;
-  line-height:50px;
+  line-height:100px;
   color:black;
+  width: 50px;
+  height:50px;
+  z-index: 3;
+}
+div {
+   font-size: 30px;
 }
 
-.text {
+p {
+  font-size: 30px;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+h2 {
+   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+
+}
+
+/*.text {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   color: black;
 }
+.aktGew{
+  text-align: center;
+  background-image: #9BAEFD;
+} */
 
 #links {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   background-color: #9BAEFD;
   cursor: pointer;
   width: 50px;
@@ -21,21 +64,29 @@
   top:50%;
   left:58%;
   margin-top:+20px;
-/*  margin-left: 795px; */
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
 
 }
 
-#mitte {
+#mittejn {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   background-color:#C0C0C0 ;
   width: 200px;
-  heigt: 50px;
+  heigt: 100px;
   position:  inherit;
   top:50%;
   left:58%;
-  margin-top:+20px;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+
 }
 
  #rechts{
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   background-color: #9BAEFD;
   cursor: pointer;
   width: 50px;
@@ -44,6 +95,10 @@
   top:50%;
   left:58%;
   margin-top:+20px;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
 }
 
 .linksBtn{
@@ -73,11 +128,64 @@
   color:black;
 }
 h3 {
-  margin-top: 150px;
-  margin-left: -1000px;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
-table{
+/* table{
   border: 1px solid gray;
-  margin-left: 300px;
+  margin-left: 17%;
   background-color: white;
+} */
+
+ #tableTrain{
+   font-size: 0.8em;
+   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+}
+
+#tableTrain th{
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    text-align: center;
+    background-color: #9BAEFD;
+}
+
+
+#tableTrain{
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-collapse: collapse;
+  background-color: white;
+}
+#tableTrain td{
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+border: 1px solid #9BAEFD;
+}
+
+#tableTrain tr:first-child th {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  border-top: 0;
+}
+#tableTrain tr:last-child td {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  border-bottom: 0;
+}
+#tableTrain tr td:first-child,
+#tableTrain tr th:first-child {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  border-left: 0;
+}
+#tableTrain tr td:last-child,
+#tableTrain tr th:last-child {
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  border-right: 0;
 }
