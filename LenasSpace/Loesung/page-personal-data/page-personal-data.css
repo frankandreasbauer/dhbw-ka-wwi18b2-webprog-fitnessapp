@@ -36,14 +36,17 @@ button {
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     }
 
+    button:hover {
+       background-color:#a0a2a3;
+    }
 
 #pdDeleteBtn{
   background-color:red;
 }
-  button:hover, #pdDeleteBtn:hover{
-     background-color:#a0a2a3;
-  }
-  
+
+#pdDeleteBtn:hover{
+  background-color: #eb6b34;
+}
 
 #geschlecht{
  height:1.5rem;
@@ -60,6 +63,7 @@ button {
   padding-right:20%;
   border-left: 10%;
 }
+
 .input {
   display:inline;
   text-align:center;
@@ -67,6 +71,7 @@ button {
   padding-left: 10%;
   border-left: 10%;
 }
+
 .inputbox {
   border-radius: 25px;
   border: 0.1rem solid #6D87C5;
@@ -87,4 +92,22 @@ button {
   width: 10rem;
   background: white;
   color: black;
+}
+
+.bmiAnzeige {
+  border-radius: 25px;
+  border: 0.1rem solid #6D87C5;
+  padding: 20px;
+  width: 45%;
+  height: 150px;
+  float: left;
+}
+
+.idealgewichtAnzeige {
+  border-radius: 25px;
+  border: 0.1rem solid #6D87C5;
+  padding: 20px;
+  width: 45%;
+  height: 150px;
+  float: right;
 }

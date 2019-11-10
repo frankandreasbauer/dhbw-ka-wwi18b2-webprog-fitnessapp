@@ -34,6 +34,7 @@ class PagePersonalData {
         let pageDom = document.createElement("div");
         pageDom.innerHTML = html;
         pageDom.querySelector("#bmiBtn").addEventListener("click", () => this.bmiRechnen());
+        pageDom.querySelector('#pdDeleteBtn').addEventListener("click", () => this.angabenLoeschen());
 
         this. getAllPerDat();
         this._app.setPageTitle("Persönliche Daten",{isSubPage: true});
@@ -59,6 +60,8 @@ class PagePersonalData {
       var gewicht = document.getElementById("gewicht").value;
       var bmi = gewicht / (größe / 100 * größe / 100);
       bmi = bmi.toFixed(1);
+      document.getElementById("bmiAnzeige").style.display = "block";
+      document.getElementById("idealgewichtAnzeige").style.display = "block"
       document.getElementById("bmiAusgabe").value = bmi;
       this._app.firebase.savePer({
         id:"idPerDat",
@@ -88,4 +91,12 @@ class PagePersonalData {
       document.getElementById("bmiBewertung").value = "Bitte geben Sie korrekte Werte an.";}
       }
 
+angabenLoeschen() {
+  document.getElementById("größe").value = "";
+  document.getElementById("geschlecht").value = "";
+  document.getElementById("gewicht").value = "";
+  document.getElementById("name").value = "";
+  document.getElementById("bmiAnzeige").style.display = "none";
+  document.getElementById("idealgewichtAnzeige").style.display = "none";
+}
 }

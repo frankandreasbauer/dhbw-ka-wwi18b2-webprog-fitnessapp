@@ -4,41 +4,80 @@
 
 <main>
 
+
   <!-- Begrüßungstext -->
-  <!-- <p class="left">Hier können Sie Ihre persönlichen Daten eingeben.</p> -->
+  <p class="center">Hier können Sie Ihre persönlichen Daten eingeben.</p>
 
   <!-- Eingabe der Daten in Textboxen -->
-    <p class= "inputbox">
-      <img src="pd_name.png" height="100%"</img>
-      <label class="filler"> 123</label>
-      <label class ="angaben">
-        Name:
-      </label>
-      <label class="input">
-        <input type="text" id="name" name="name">
-      </label>
-      </p>
+  <p class= "inputbox">
+    <img src="pd_name.png" height="100%"</img>
+    <label class ="angaben">
+      Name:
+    </label>
+    <label class="input">
+      <input type="text" id="name" name="name">
+    </label>
+  </p>
 
-           		<p class= "inputbox">
-                <img src="pd_gender.png"; style="float:left" height = 100%</img>
-                <label class="angaben">
-                Geschlecht:
-           	    <select id = "geschlecht">
-                    <option value= "m">männlich</option>
-             				<option value= "w">weiblich</option>
-           			</select>
-                </label>
-           		</p>
+  <p class= "inputbox">
+    <img src="pd_gender.png"; style="float:left" height = 100%</img>
+    <label class="angaben">
+      Geschlecht:
+      <select id = "geschlecht">
+        <option value= "m">männlich</option>
+        <option value= "w">weiblich</option>
+      </select>
+    </label>
+  </p>
 
-  <p class= "inputbox"><img src="pd_height.png"; style="float:left" height = 100%</img> <label class="angaben">Größe: <input class="textbox" type="number" id="größe"
-         min="50" max="300"> cm</label> </p>
+  <p class= "inputbox">
+    <img src="pd_height.png"; style="float:left" height = 100%</img>
+    <label class="angaben">
+      Größe:
+      <input class="textbox" type="number" id="größe">
+      cm
+    </label>
+  </p>
 
-  <p class= "inputbox"> <img src="pd_weight.png"; style="float:left" height = 100%</img><label class ="angaben">Gewicht:
-    <input class="textbox" type="number" id="gewicht" minlength="0" maxlength="999"> kg</label> </p>
+  <p class= "inputbox">
+    <img src="pd_weight.png"; style="float:left" height = 100%>
+  </img>
+  <label class ="angaben">
+    Gewicht:
+    <input class="textbox" type="number" id="gewicht" minlength="0" maxlength="999">
+    kg
+  </label>
+</p>
 
-  <button id ="pdDeleteBtn">Angaben löschen</button>
+<button id ="pdDeleteBtn">
+  Angaben löschen
+</button>
 
-    <button id = "bmiBtn">BMI berechnen</button>
+<button id = "bmiBtn">
+  BMI berechnen
+</button>
 
-    <p><span>Ihr BMI beträgt:</span> <output id="bmiAusgabe">0</output> kg/m²</p>
-    <output id = "bmiBewertung"></output>
+
+  <div class="bmiAnzeige" id="bmiAnzeige" style="display: none">
+    <p>
+      <span>
+        Ihr BMI beträgt:
+      </span>
+      <output id="bmiAusgabe">
+        0
+      </output> kg/m²</p>
+      <output id = "bmiBewertung">
+      </output>
+    </div>
+
+    <div class="idealgewichtAnzeige" id="idealgewichtAnzeige" style="display: none">
+      <p>
+        <span>
+          Ihr Idealgewicht beträgt:
+        </span>
+        <output id="idealgewichtAusgabe">
+          0
+        </output> kg </p>
+        <output id = "bmiBewertung">
+        </output>
+      </div>
