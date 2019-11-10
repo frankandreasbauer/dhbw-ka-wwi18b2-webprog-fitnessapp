@@ -46,6 +46,20 @@ button {
  font-size: 1rem;
 }
 
-p.ex1 {
-  padding-left: 1rem;
+.inputbox {
+  border-radius: 25px;
+  border: 0.1rem solid #6D87C5;
+  padding: 2rem;
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  margin-left: 14%;
+  width: 64%;
+  height: 10%;
+}
+
+.textbox {
+  width: 10rem;
+  background: white;
+  color: black;
 }
