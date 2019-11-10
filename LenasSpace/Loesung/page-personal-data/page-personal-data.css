@@ -41,18 +41,46 @@ button {
     display: inline-grid;
 }
 
+button.delete {
+  display: inline-block;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+background-color: red;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  }
+
+  button:hover{
+     background-color:#a0a2a3;
+  }
+}
+
 #geschlecht{
  height:1.5rem;
  font-size: 1rem;
 }
 
+.angaben {
+  text-align: justify;
+  padding-top: 3%;
+  padding-left: 10%;
+  border-left: 10%;
+}
 .inputbox {
   border-radius: 25px;
   border: 0.1rem solid #6D87C5;
   padding: 2rem;
   padding-left: 5%;
-  padding-top: 5%;
-  padding-bottom: 1%;
+  padding-top: 3%;
+  padding-bottom: 2%;
   margin-left: 14%;
   width: 64%;
   height: 10%;
