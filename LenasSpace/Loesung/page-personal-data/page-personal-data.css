@@ -10,8 +10,10 @@ label {
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
-input{ font-size: 0.85rem;
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif; },
+input{
+  font-size: 0.85rem;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
 label {
     margin: .4rem 0;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
@@ -34,24 +36,34 @@ button {
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
     }
 
-    button:hover{
-       background-color:#a0a2a3;
-    }
-.buttons{
-    display: inline-grid;
+
+#pdDeleteBtn{
+  background-color:red;
 }
-  button:hover{
+  button:hover, #pdDeleteBtn:hover{
      background-color:#a0a2a3;
   }
+  
 
 #geschlecht{
  height:1.5rem;
  font-size: 1rem;
 }
-
+.filler{
+  visibility: hidden;
+}
 .angaben {
-  text-align: justify;
-  padding-top: 3%;
+  display:inline;
+  text-align: left;
+  padding-top: 8%;
+  padding-left: 0%;
+  padding-right:20%;
+  border-left: 10%;
+}
+.input {
+  display:inline;
+  text-align:center;
+  padding-top: 8%;
   padding-left: 10%;
   border-left: 10%;
 }
@@ -65,6 +77,10 @@ button {
   margin-left: 14%;
   width: 64%;
   height: 10%;
+}
+
+.inputbox > img{
+  float:left;
 }
 
 .textbox {

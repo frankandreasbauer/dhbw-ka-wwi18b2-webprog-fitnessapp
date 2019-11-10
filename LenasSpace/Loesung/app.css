@@ -227,3 +227,21 @@ main a:visited {
 main a:hover {
     color: red;
 }
+
+/* Footer */
+
+.footer-end h1 {
+  display: inline;
+  font-size: 0.7em;
+  padding-left: 3%;
+  color: white;
+}
+.footer-end span {
+  float: right;
+  color: white;
+}
+.footer-design {
+  font-size: 0.7em;
+  padding-right: 3%;
+  color: white;
+}
