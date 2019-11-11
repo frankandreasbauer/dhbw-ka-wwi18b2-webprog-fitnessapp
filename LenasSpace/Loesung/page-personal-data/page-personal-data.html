@@ -6,15 +6,16 @@
 
 
   <!-- Begrüßungstext -->
-  <p class="center">Hier können Sie Ihre persönlichen Daten eingeben.</p>
+  <p class="center">Hier können Sie Ihre persönlichen Daten eingeben:</p>
 
   <!-- Eingabe der Daten in Textboxen -->
   <p class= "inputbox">
     <img src="pd_name.png" height="100%"</img>
     <label class ="angaben">
       Name:
-      <input type="text" id="name" name="name">
       </label>
+      <input class ="inputName" type="text" id="name" placeholder: "Name eingeben">
+      </input>
   </p>
 
   <p class= "inputbox">
@@ -32,8 +33,7 @@
     <img src="pd_height.png"; style="float:left" height = 100%</img>
     <label class="angaben">
       Größe:
-      <input class="textbox" type="number" id="größe">
-      cm
+      <input class="textbox" type="number" id="größe" placeholder ="cm">
     </label>
   </p>
 
@@ -42,8 +42,7 @@
   </img>
   <label class ="angaben">
     Gewicht:
-    <input class="textbox" type="number" id="gewicht" minlength="0" maxlength="999">
-    kg
+    <input class="textbox" type="number" id="gewicht" placeholder ="kg">
   </label>
 </p>
 
@@ -63,7 +62,7 @@
       </span>
       <output id="bmiAusgabe">
         0
-      </output> kg/m²</p>
+      </output></p>
       <output id = "bmiBewertung">
       </output>
     </div>
