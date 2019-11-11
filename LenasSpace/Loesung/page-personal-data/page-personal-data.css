@@ -59,7 +59,7 @@ button {
   display:inline;
   text-align: left;
   padding-top: 8%;
-  padding-left: 0%;
+  padding-left: 6.6%;
   padding-right:20%;
   border-left: 10%;
 }
@@ -73,6 +73,7 @@ button {
 }
 
 .inputbox {
+  text-align: left;
   border-radius: 25px;
   border: 0.1rem solid #6D87C5;
   padding: 2rem;
@@ -81,7 +82,7 @@ button {
   padding-bottom: 2%;
   margin-left: 14%;
   width: 64%;
-  height: 10%;
+  height: 6%;
 }
 
 .inputbox > img{
@@ -92,6 +93,10 @@ button {
   width: 10rem;
   background: white;
   color: black;
+}
+
+.auswahl{
+  width: 30%;
 }
 
 .bmiAnzeige {
