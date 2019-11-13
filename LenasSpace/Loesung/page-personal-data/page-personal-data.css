@@ -90,6 +90,7 @@ button {
 }
 
 #geschlecht{
+ display: inline-block;
  height:70%;
  font-size: 1rem;
  transform: translate(35%, 0%);
@@ -126,10 +127,6 @@ button {
   color: black;
 }
 
-.auswahl{
-  width: 30%;
-}
-
 #bmiAnzeige {
   display: inline-block;
   border-radius: 25px;
@@ -146,4 +143,8 @@ button {
   padding: 20px;
   width: 45%;
   height: 5%;
+}
+
+.bmiBewertung {
+  display: inline-block;
 }
