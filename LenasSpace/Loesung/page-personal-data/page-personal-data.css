@@ -92,8 +92,16 @@ button {
 #geschlecht{
  height:70%;
  font-size: 1rem;
- transform: translate(30%, 0%);
+ transform: translate(35%, 0%);
  width: 30%;
+}
+
+#alter{
+  height: 70%;
+  font-size: 1rem;
+  border-left: 15%;
+  width: 30%;
+  transform: translate(66%,0%);
 }
 
 #größe{
@@ -122,20 +130,20 @@ button {
   width: 30%;
 }
 
-.bmiAnzeige {
+#bmiAnzeige {
+  display: inline-block;
   border-radius: 25px;
   border: 0.1rem solid #6D87C5;
   padding: 20px;
   width: 45%;
-  height: 150px;
-  float: left;
+  height: 5%;
 }
 
-.idealgewichtAnzeige {
+#idealgewichtAnzeige {
+  display: inline-block;
   border-radius: 25px;
   border: 0.1rem solid #6D87C5;
   padding: 20px;
   width: 45%;
-  height: 150px;
-  float: right;
+  height: 5%;
 }

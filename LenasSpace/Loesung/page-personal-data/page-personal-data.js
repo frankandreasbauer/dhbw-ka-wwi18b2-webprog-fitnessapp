@@ -60,8 +60,8 @@ class PagePersonalData {
       var gewicht = document.getElementById("gewicht").value;
       var bmi = gewicht / (größe / 100 * größe / 100);
       bmi = bmi.toFixed(1);
-      document.getElementById("bmiAnzeige").style.display = "block";
-      document.getElementById("idealgewichtAnzeige").style.display = "block"
+      document.getElementById("bmiAnzeige").style.display = "inline-block";
+      document.getElementById("idealgewichtAnzeige").style.display = "inline-block";
       document.getElementById("bmiAusgabe").value = bmi;
       this._app.firebase.savePer({
         id:"idPerDat",
@@ -92,11 +92,14 @@ class PagePersonalData {
       }
 
 angabenLoeschen() {
-  document.getElementById("größe").value = "";
-  document.getElementById("geschlecht").value = "";
-  document.getElementById("gewicht").value = "";
   document.getElementById("name").value = "";
+  document.getElementById("alter").value = "";
+  document.getElementById("geschlecht").value = "";
+  document.getElementById("größe").value = "";
+  document.getElementById("gewicht").value = "";
+
   document.getElementById("bmiAnzeige").style.display = "none";
   document.getElementById("idealgewichtAnzeige").style.display = "none";
+
 }
 }

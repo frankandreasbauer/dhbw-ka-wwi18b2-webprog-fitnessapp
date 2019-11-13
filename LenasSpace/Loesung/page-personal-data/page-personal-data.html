@@ -19,13 +19,21 @@
   </p>
 
   <p class= "inputbox">
-    <img src="pd_gender.png"; style="float:left" height = 100%</img>
+    <img src="pd_gender.png" height = 100%</img>
     <label class="angaben">
       Geschlecht:
       <select class="auswahl" id = "geschlecht">
         <option value= "m">männlich</option>
         <option value= "w">weiblich</option>
       </select>
+    </label>
+  </p>
+
+  <p class= "inputbox">
+    <img src="pd_age.png"; style="float:left" height = 100%</img>
+    <label class="angaben">
+      Alter:
+      <input class="textbox" type="number" id="alter" placeholder ="Jahre">
     </label>
   </p>
 
@@ -46,6 +54,7 @@
   </label>
 </p>
 
+<p>
 <button id ="pdDeleteBtn">
   Angaben löschen
 </button>
@@ -53,21 +62,21 @@
 <button id = "bmiBtn">
   BMI berechnen
 </button>
+</p>
 
-
-  <div class="bmiAnzeige" id="bmiAnzeige" style="display: none">
+  <div id="bmiAnzeige" style= "display: none">
     <p>
       <span>
         Ihr BMI beträgt:
       </span>
       <output id="bmiAusgabe">
         0
-      </output></p>
+      </output><p>
       <output id = "bmiBewertung">
       </output>
     </div>
 
-    <div class="idealgewichtAnzeige" id="idealgewichtAnzeige" style="display: none">
+    <div id="idealgewichtAnzeige" style= "display: none">
       <p>
         <span>
           Ihr Idealgewicht beträgt:
