@@ -150,6 +150,9 @@ angabenLoeschen() {
 frauenAuswahl() {
   document.getElementById("auswahlText").style.display = "inline-block";
   if (document.getElementById("geschlecht").value = "weiblich"){
+    document.getElementById("woman1").style.display = "inline";
+    document.getElementById("woman2").style.display = "inline";
+    document.getElementById("woman3").style.display = "inline";
 
   }
 
