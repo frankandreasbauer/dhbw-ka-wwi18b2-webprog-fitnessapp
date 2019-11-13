@@ -194,15 +194,15 @@ if(größe > 300 || größe < 50 || gewicht < 20 || gewicht > 800 || alter <= 0 
 else{
 if(document.getElementById('rb1').checked){
   var kalorien = (gewicht *10 + größe * 6.25 - alter * 5)* 1.1;
-  document.getElementById('kalorienAnzeige').value = kalorien;
+  document.getElementById('kalorienAnzeige').value = "Ihr täglicher Energiebedarf beträgt: " + kalorien.toFixed(1) + " kcal.";
 }
 if(document.getElementById('rb2').checked){
   var kalorien = (gewicht *10 + größe * 6.25 - alter * 5)* 1.0;
-  document.getElementById('kalorienAnzeige').value = kalorien;
+  document.getElementById('kalorienAnzeige').value = "Ihr täglicher Energiebedarf beträgt: " + kalorien.toFixed(1) + " kcal.";
 }
 if(document.getElementById('rb3').checked){
   var kalorien = (gewicht *10 + größe * 6.25 - alter * 5)* 0.9;
-  document.getElementById('kalorienAnzeige').value = kalorien;
+  document.getElementById('kalorienAnzeige').value = "Ihr täglicher Energiebedarf beträgt: " + kalorien.toFixed(1) + " kcal.";
 }
 }
 
