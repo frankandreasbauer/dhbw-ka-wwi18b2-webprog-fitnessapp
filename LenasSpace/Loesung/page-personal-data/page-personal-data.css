@@ -50,6 +50,10 @@ button {
   background-color: #eb6b34;
 }
 
+#tagesbedarfBtn{
+  margin-top: 2rem;
+}
+
 .angaben {
   display:inline;
   text-align: left;

@@ -36,7 +36,7 @@ class PagePersonalData {
         pageDom.querySelector("#bmiBtn").addEventListener("click", () => this.bmiRechnen());
         pageDom.querySelector("#bmiBtn").addEventListener("click", () => this.idealgewichtRechnen());
         pageDom.querySelector('#pdDeleteBtn').addEventListener("click", () => this.angabenLoeschen());
-
+        pageDom.querySelector('#tagesbedarfBtn').addEventListener("click", () => this.frauenAuswahl())
 
         this. getAllPerDat();
         this._app.setPageTitle("Persönliche Daten",{isSubPage: true});
@@ -145,6 +145,10 @@ angabenLoeschen() {
   document.getElementById("gewicht").value = "";
   document.getElementById("bmiAnzeige").style.display = "none";
   document.getElementById("idealgewichtAnzeige").style.display = "none";
+}
+
+frauenAuswahl() {
+
 }
 
 }
