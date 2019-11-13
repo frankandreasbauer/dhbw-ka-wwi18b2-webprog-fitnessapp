@@ -148,6 +148,11 @@ angabenLoeschen() {
 }
 
 frauenAuswahl() {
+  document.getElementById("auswahlText").style.display = "inline-block";
+  if (document.getElementById("geschlecht").value = "weiblich"){
+
+  }
+
 
 }
 
