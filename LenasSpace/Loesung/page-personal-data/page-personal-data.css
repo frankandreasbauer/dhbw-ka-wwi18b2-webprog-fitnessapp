@@ -153,10 +153,18 @@ button {
   display: inline-block;
 }
 
-#woman1 {
+#woman1{
   margin-right: 3rem;
 }
 
-#woman3 {
+#man1{
+  margin-right: 3rem;
+}
+
+#woman3{
+  margin-left: 3rem ;
+}
+
+#man3{
   margin-left: 3rem ;
 }

@@ -36,7 +36,7 @@ class PagePersonalData {
         pageDom.querySelector("#bmiBtn").addEventListener("click", () => this.bmiRechnen());
         pageDom.querySelector("#bmiBtn").addEventListener("click", () => this.idealgewichtRechnen());
         pageDom.querySelector('#pdDeleteBtn').addEventListener("click", () => this.angabenLoeschen());
-        pageDom.querySelector('#tagesbedarfBtn').addEventListener("click", () => this.frauenAuswahl())
+        pageDom.querySelector('#tagesbedarfBtn').addEventListener("click", () => this.körperAuswahl());
 
         this. getAllPerDat();
         this._app.setPageTitle("Persönliche Daten",{isSubPage: true});
@@ -147,13 +147,31 @@ angabenLoeschen() {
   document.getElementById("idealgewichtAnzeige").style.display = "none";
 }
 
-frauenAuswahl() {
-  document.getElementById("auswahlText").style.display = "inline-block";
-  if (document.getElementById("geschlecht").value = "weiblich"){
+körperAuswahl() {
+  var geschlecht = document.getElementById("geschlecht");
+  var gender = geschlecht.options[geschlecht.selectedIndex].value;
+  document.getElementById("auswahlError").style.display = "inline-block";
+
+  if (gender == "w"){
+    document.getElementById("auswahlError").style.display = "none";
+    document.getElementById("auswahlText").style.display = "inline-block";
     document.getElementById("woman1").style.display = "inline";
     document.getElementById("woman2").style.display = "inline";
     document.getElementById("woman3").style.display = "inline";
+    document.getElementById("man1").style.display = "none";
+    document.getElementById("man2").style.display = "none";
+    document.getElementById("man3").style.display = "none";
+  }
 
+  if (gender == "m"){
+    document.getElementById("auswahlError").style.display = "none";
+    document.getElementById("auswahlText").style.display = "inline-block";
+    document.getElementById("man1").style.display = "inline";
+    document.getElementById("man2").style.display = "inline";
+    document.getElementById("man3").style.display = "inline";
+    document.getElementById("woman1").style.display = "none";
+    document.getElementById("woman2").style.display = "none";
+    document.getElementById("woman3").style.display = "none";
   }
 
 
