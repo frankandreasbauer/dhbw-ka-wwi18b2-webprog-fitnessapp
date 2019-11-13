@@ -150,7 +150,6 @@ angabenLoeschen() {
 körperAuswahl() {
   var geschlecht = document.getElementById("geschlecht");
   var gender = geschlecht.options[geschlecht.selectedIndex].value;
-  document.getElementById("auswahlError").style.display = "inline-block";
 
   if (gender == "w"){
     document.getElementById("auswahlError").style.display = "none";
@@ -161,6 +160,9 @@ körperAuswahl() {
     document.getElementById("man1").style.display = "none";
     document.getElementById("man2").style.display = "none";
     document.getElementById("man3").style.display = "none";
+    document.getElementById("rb1").style.display = "inline-block";
+    document.getElementById("rb2").style.display = "inline-block";
+    document.getElementById("rb3").style.display = "inline-block";
   }
 
   if (gender == "m"){
@@ -172,6 +174,9 @@ körperAuswahl() {
     document.getElementById("woman1").style.display = "none";
     document.getElementById("woman2").style.display = "none";
     document.getElementById("woman3").style.display = "none";
+    document.getElementById("rb1").style.display = "inline-block";
+    document.getElementById("rb2").style.display = "inline-block";
+    document.getElementById("rb3").style.display = "inline-block";
   }
 
 
