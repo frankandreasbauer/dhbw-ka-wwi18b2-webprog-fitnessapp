@@ -127,15 +127,13 @@ class PagePersonalData {
       if (größe > 300 || größe < 50 || gewicht < 20 || gewicht > 800 || alter <= 0 || alter > 150){
       document.getElementById("idealgewichtAnfang").style.display ="none";
       document.getElementById("idealgewichtAusgabe").style.display = "none";
-      document.getElementById("idealgewichtBewertung").value = "Bitte geben Sie korrekte Werte an.";
-    }
+      document.getElementById("idealgewichtBewertung").value = "Bitte geben Sie korrekte Werte an.";}
     else{
       if (alter > 0 && alter < 150 ){
       document.getElementById("idealgewichtAnfang").style.display ="inline-block";
       document.getElementById("idealgewichtAusgabe").style.display = "inline-block";
       document.getElementById("idealgewichtAusgabe").value = idealgewicht.toFixed(1) + "kg";
-      document.getElementById("idealgewichtBewertung").value = "";
-    }
+      document.getElementById("idealgewichtBewertung").value = "";}
     }
     }
 
