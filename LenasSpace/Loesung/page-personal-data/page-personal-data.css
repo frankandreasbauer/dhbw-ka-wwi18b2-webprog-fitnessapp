@@ -54,6 +54,10 @@ button {
   margin-top: 2rem;
 }
 
+#kalorienbedarfBtn{
+  margin-top: 2rem;
+}
+
 .angaben {
   display:inline;
   text-align: left;

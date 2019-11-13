@@ -37,6 +37,7 @@ class PagePersonalData {
         pageDom.querySelector("#bmiBtn").addEventListener("click", () => this.idealgewichtRechnen());
         pageDom.querySelector('#pdDeleteBtn').addEventListener("click", () => this.angabenLoeschen());
         pageDom.querySelector('#tagesbedarfBtn').addEventListener("click", () => this.körperAuswahl());
+        pageDom.querySelector('#kalorienbedarfBtn').addEventListener("click", () => this.kalorienbedarfRechnen());
 
         this. getAllPerDat();
         this._app.setPageTitle("Persönliche Daten",{isSubPage: true});
@@ -163,6 +164,7 @@ körperAuswahl() {
     document.getElementById("rb1").style.display = "inline-block";
     document.getElementById("rb2").style.display = "inline-block";
     document.getElementById("rb3").style.display = "inline-block";
+    document.getElementById("kalorienbedarfBtn").style.display = "inline-block";
   }
 
   if (gender == "m"){
@@ -177,7 +179,32 @@ körperAuswahl() {
     document.getElementById("rb1").style.display = "inline-block";
     document.getElementById("rb2").style.display = "inline-block";
     document.getElementById("rb3").style.display = "inline-block";
+    document.getElementById("kalorienbedarfBtn").style.display = "inline-block";
   }
+}
+
+kalorienbedarfRechnen(){
+  var gewicht = document.getElementById("gewicht").value;
+  var größe = document.getElementById("größe").value;
+  var alter = document.getElementById("alter").value;
+
+if(größe > 300 || größe < 50 || gewicht < 20 || gewicht > 800 || alter <= 0 || alter > 150) {
+    document.getElementById("kalorienAnzeige").value = "Bitte geben Sie korrekte Werte an.";
+}
+else{
+if(document.getElementById('rb1').checked){
+  var kalorien = (gewicht *10 + größe * 6.25 - alter * 5)* 1.1;
+  document.getElementById('kalorienAnzeige').value = kalorien;
+}
+if(document.getElementById('rb2').checked){
+  var kalorien = (gewicht *10 + größe * 6.25 - alter * 5)* 1.0;
+  document.getElementById('kalorienAnzeige').value = kalorien;
+}
+if(document.getElementById('rb3').checked){
+  var kalorien = (gewicht *10 + größe * 6.25 - alter * 5)* 0.9;
+  document.getElementById('kalorienAnzeige').value = kalorien;
+}
+}
 
 
 }
