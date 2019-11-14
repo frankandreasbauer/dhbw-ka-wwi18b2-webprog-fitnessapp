@@ -146,11 +146,47 @@ angabenLoeschen() {
   document.getElementById("gewicht").value = "";
   document.getElementById("bmiAnzeige").style.display = "none";
   document.getElementById("idealgewichtAnzeige").style.display = "none";
+  document.getElementById("auswahlText").style.display = "none";
+  document.getElementById("man1").style.display = "none";
+  document.getElementById("man2").style.display = "none";
+  document.getElementById("man3").style.display = "none";
+  document.getElementById("woman1").style.display = "none";
+  document.getElementById("woman2").style.display = "none";
+  document.getElementById("woman3").style.display = "none";
+  document.getElementById("rb1").style.display = "none";
+  document.getElementById("rb2").style.display = "none";
+  document.getElementById("rb3").style.display = "none";
+  document.getElementById("auswahlError").style.display = "inline";
+  document.getElementById("kalorienbedarfBtn").style.display = "none";
+  document.getElementById("kalorienAnzeige").style.display = "none";
 }
 
 körperAuswahl() {
+  var größe = document.getElementById("größe").value;
+  var alter = document.getElementById("alter").value;
   var geschlecht = document.getElementById("geschlecht");
   var gender = geschlecht.options[geschlecht.selectedIndex].value;
+
+  if (größe > 300 || größe < 50 || gewicht < 20 || gewicht > 800 || alter <= 0 || alter > 150){
+    document.getElementById("auswahlError").style.display = "inline";
+    document.getElementById("bmiAnzeige").style.display = "none";
+    document.getElementById("idealgewichtAnzeige").style.display = "none";
+    document.getElementById("auswahlText").style.display = "none";
+    document.getElementById("man1").style.display = "none";
+    document.getElementById("man2").style.display = "none";
+    document.getElementById("man3").style.display = "none";
+    document.getElementById("woman1").style.display = "none";
+    document.getElementById("woman2").style.display = "none";
+    document.getElementById("woman3").style.display = "none";
+    document.getElementById("rb1").style.display = "none";
+    document.getElementById("rb2").style.display = "none";
+    document.getElementById("rb3").style.display = "none";
+    document.getElementById("kalorienbedarfBtn").style.display = "none";
+    document.getElementById("kalorienAnzeige").style.display = "none";
+
+  }
+
+  else {
 
   if (gender == "w"){
     document.getElementById("auswahlError").style.display = "none";
@@ -182,11 +218,13 @@ körperAuswahl() {
     document.getElementById("kalorienbedarfBtn").style.display = "inline-block";
   }
 }
+}
 
 kalorienbedarfRechnen(){
   var gewicht = document.getElementById("gewicht").value;
   var größe = document.getElementById("größe").value;
   var alter = document.getElementById("alter").value;
+  document.getElementById("kalorienAnzeige").style.display = "inline-block";
 
 if(größe > 300 || größe < 50 || gewicht < 20 || gewicht > 800 || alter <= 0 || alter > 150) {
     document.getElementById("kalorienAnzeige").value = "Bitte geben Sie korrekte Werte an.";

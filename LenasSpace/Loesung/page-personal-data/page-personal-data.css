@@ -1,20 +1,16 @@
-/* Klassen für Text-Ausrichtung */
-.left {text-align: left;}
-.center {text-align: center;}
-
 /* Erstellung von Textboxen */
 
-
-label {
-    display: block;
+/* label {
+    display: inline-block;
     font: 1rem 'Fira Sans', sans-serif;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-}
+} */
 
-input{
+/* input{
   font-size: 0.85rem;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-}
+} */
+
 label {
     margin: .4rem 0;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
@@ -102,7 +98,7 @@ button {
  height:70%;
  font-size: 1rem;
  transform: translate(35%, 0%);
- width: 30%;
+ width: 25%;
 }
 
 #alter{
@@ -151,6 +147,17 @@ button {
   padding: 20px;
   width: 45%;
   height: 5%;
+}
+
+#kalorienAnzeige {
+  display: inline-block;
+  border-radius: 25px;
+  border: 0.1rem solid #6D87C5;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 45%;
+  height: 2.5%;
+  margin-top: 2rem;
 }
 
 .bmiBewertung {
