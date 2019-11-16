@@ -1,0 +1,27 @@
+fralile-fit
+
+Diese Single-Page-App soll dazu dienen seine eigenen Fitnessvorsätze festzuhalten und zu überwachen.
+
+#Installation
+Die Seite muss über den Atom-Live-Server geöffnet werden. Es muss der Pfad LenasSpace/Loesung geöffnet werden.
+
+#Funktionen
+Die App besteht aus vier verschiedenen Seiten.
+Zunächste gelangt der User auf die Startseite. Hier ist es möglich eine der drei weiteren Seiten über die selbstsprechenden Button zu besuchen.
+
+Persönliche Daten - Seite:
+Auf der Seite der Persönlichen Daten kann der User seine eigenen Angaben zu Größe, Alter und Gewicht machen. Durch das Berechen des BMI's
+werden die Daten in einer Datenbank gespeichert und können per Button auch jederzeit wieder gelöscht werden.
+Neben der BMI Berechnung ist es außerdem möglich seinen täglichen Kalorienbedarf zu errechnen.
+
+Ziele - Seite
+Auf der Seite für die Ziele wird das Gewicht aus den Perönlichen Daten übernommen. Hier kann per Button das Wunschgewicht eingegeben werden
+und sofort wird ein idealer Trainingsplan in der unteren Tabelle angezeigt.
+
+Trainingsplan - Seite
+Auf der Trainingsplan-Seite kann der User individuell Übungen jeglicher Art hinzufügen und löschen. Die eingetragenen Trainingseinheiten
+werden ebenfalls in einer Datenbank gespeichert. Je nach Trainingsart (Kraft, Cardio, Regeneration) ändern sich die Möglichkeiten der 
+einzutragenden Angaben.
+
+
+
