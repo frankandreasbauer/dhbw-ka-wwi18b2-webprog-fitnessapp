@@ -50,6 +50,7 @@ class PagePersonalData {
           let perDat = await this._app.firebase.selectAllPerDat("perDat");
           perDat.forEach(perDats => {
             document.getElementById("name").value = perDats.name;
+            document.getElementById("alter").value = perDats.alter;
             document.getElementById("geschlecht").value =perDats.geschlecht;
             document.getElementById("größe").value = perDats.groesse;
             document.getElementById("gewicht").value = perDats.gewicht;
