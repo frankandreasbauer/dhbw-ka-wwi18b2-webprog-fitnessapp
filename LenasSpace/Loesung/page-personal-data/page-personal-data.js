@@ -69,6 +69,7 @@ class PagePersonalData {
       this._app.firebase.savePer({
         id:"idPerDat",
         name: document.getElementById("name").value,
+        alter: document.getElementById("alter").value,
         bmi: bmi,
         geschlecht: document.getElementById("geschlecht").value,
         groesse: document.getElementById("größe").value,
@@ -159,6 +160,7 @@ angabenLoeschen() {
   document.getElementById("auswahlError").style.display = "inline";
   document.getElementById("kalorienbedarfBtn").style.display = "none";
   document.getElementById("kalorienAnzeige").style.display = "none";
+    this._app.firebase.deletePersnDatById("idPerDat");
 }
 
 körperAuswahl() {

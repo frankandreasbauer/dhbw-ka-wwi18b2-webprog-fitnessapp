@@ -33,6 +33,10 @@ async deleteTrainById(id) {
     return this._train.doc(id).delete();
 }
 
+async deletePersnDatById(id) {
+    return this._perDat.doc(id).delete();
+}
+
 async selectAllTrains(collection) {
     let result = await this._train.orderBy("id").get();
     let trains = [];
