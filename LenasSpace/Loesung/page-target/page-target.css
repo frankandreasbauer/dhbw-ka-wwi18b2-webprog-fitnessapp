@@ -1,10 +1,4 @@
-/*
-.divAkt{
-  float: left;
-    margin-top: -2em;
-
-}*/
-
+/*Layout Gewicht und Wunschgewicht*/
 .divWu{
   float:right;
   margin-top: -2em;
@@ -51,7 +45,6 @@
   transform: translate(50%,0%);
 }
 
-
 .divTab{
 bottom: 2em;
 margin-top:0em;
@@ -60,7 +53,13 @@ float:left;
 }
 
 
+p {
+  font-size: 25px;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
 
+
+/*Layout Wunschgewicht + und - Button*/
 .box {
   background-color: grey;
   float: left;
@@ -73,28 +72,7 @@ float:left;
   height:50px;
   z-index: 3;
 }
-div {
-   font-size: 30px;
-}
 
-p {
-  font-size: 25px;
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-}
-
-/*h2 {
-   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-
-}
-
-.text {
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-  color: black;
-}
-.aktGew{
-  text-align: center;
-  background-image: #9BAEFD;
-} */
 
 #links {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
@@ -169,17 +147,14 @@ p {
 .mitteBtn:hover{
   color:black;
 }
+
+
 h3 {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
-/* table{
-  border: 1px solid gray;
-  margin-left: 17%;
-  background-color: white;
-} */
 
 
- /* Tabelle */
+/* Layout der Tabelle */
  #tableTrain{
    font-size: 0.8em;
    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
