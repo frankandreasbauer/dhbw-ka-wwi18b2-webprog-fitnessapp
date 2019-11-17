@@ -39,14 +39,14 @@ class PageTarget {
         pageDom.innerHTML = html;
         pageDom.querySelector("#links").addEventListener("click", () => this.minusCount());
         pageDom.querySelector("#rechts").addEventListener("click", () => this.plusCount());
-
+        //  eingetragenes Gewicht aus Datenbank laden
         this.getGewicht();
         this._app.setPageTitle("Ziele", {isSubPage: true});
         this._app.setPageCss(css);
         this._app.setPageHeader(pageDom.querySelector("header"));
         this._app.setPageContent(pageDom.querySelector("main"));
     }
-
+        //Wunschgewicht zur Datenbank hinzufügen und beim laden der Seite Tabelle und Wunschgewicht anzeigen
     async  getGewicht(){
           let perDat = await this._app.firebase.selectAllPerDat("perDat");
           perDat.forEach(perDats => {
@@ -86,7 +86,7 @@ class PageTarget {
            document.getElementById("mitte").value = this.counter;
       }
 
-
+      //Herunterzöhlen des aktuellen Gewichts und Anzeige des entsprechenden Trainingsplan
     minusCount(){
       var z = 5;
       var p = document.getElementById("aktGew").value - document.getElementById("mitte").value;
@@ -233,6 +233,8 @@ class PageTarget {
     // });
     // }
 
+
+    //Aktuelles Gewicht hochzählen und Anzeige des entsprechenden Trainingsplan
     plusCount(){
       var z = -5;
       var p = document.getElementById("aktGew").value - document.getElementById("mitte").value;
