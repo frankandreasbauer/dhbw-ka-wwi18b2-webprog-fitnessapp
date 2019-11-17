@@ -1,70 +1,57 @@
 
 <header>
-    <h1>Trainingsplan</h1>
+  <!-- Überschrift der Seite -->
+  <h1>Trainingsplan</h1>
 </header>
 
 
 
 <main>
+  <!-- Seitenspezifischer Seiteninhalt beginnt hier -->
   <div id="content-train">
 
+    <!-- Button um Training hinzuzufügen -->
     <div class="btn-train">
       <button id="hinzBtn" type="button" > &Uuml;bung hinzufügen</button>
       <button id="loeschBtn" type="button"> &Uuml;bung Löschen</button>
     </div>
 
+    <!-- Dropdown der Kategorie sowie Eingabefelder -->
     <div id="add-train">
-      <!-- <input type="text" id="kategorie" placeholder="Kategorie"> -->
-<span class="input">
-      <label class="simple-drop">
-      <select id="kategorie" placeholder="Kategorie">
-        <option value="" disabled selected>Kategorie auswählen</option>
-        <option value="Kraft">Kraft</option>
-        <option value ="Cardio">Cardio</option>
-        <option value ="Regeneration">Regeneration</option>
-      </select>
-      </label>
+      <span class="input">
+        <label class="simple-drop">
+          <select id="kategorie" placeholder="Kategorie">
+            <option value="" disabled selected>Kategorie auswählen</option>
+            <option value="Kraft">Kraft</option>
+            <option value ="Cardio">Cardio</option>
+            <option value ="Regeneration">Regeneration</option>
+          </select>
+        </label>
       </span>
       <span class="input">
-      <input type="text" id="uebung" placeholder=" &Uuml;bung">
+        <input type="text" id="uebung" placeholder=" &Uuml;bung">
       </span>
       <span class="input">
-      <input type="number" id="satz" placeholder="Sätze">
+        <input type="number" id="satz" placeholder="Sätze">
       </span>
       <span class="input">
-      <input type="number" id="wdh" placeholder="Wiederholungen">
+        <input type="number" id="wdh" placeholder="Wiederholungen">
       </span>
       <span class="input">
-      <input type="number" id="gewicht" placeholder="Gewicht in Kg">
+        <input type="number" id="gewicht" placeholder="Gewicht in Kg">
       </span>
-
     </div>
 
-<!-- <div class="table-header">
-  <table class="train-table">
-    <tr>
+    <!-- Tabelle für eingetragene Trainingseinheiten     -->
+    <div id="table-content">
+      <table id="train-insert">
+        <th>Auswahl</th>
+        <th>Kategorie</th>
         <th> &Uuml;bung</th>
-        <th>Satz</th>
-        <th>Wdh</th>
+        <th>Satz/Entfernung</th>
+        <th>Wdh/Zeit</th>
         <th>Gewicht</th>
-      </tr>
-  </table>
-</div> -->
-
-<div id="table-content">
-    <table id="train-insert">
-      <th>Auswahl</th>
-      <th>Kategorie</th>
-      <th> &Uuml;bung</th>
-      <th>Satz/Entfernung</th>
-      <th>Wdh/Zeit</th>
-      <th>Gewicht</th>
-    </table>
-</div>
-
+      </table>
+    </div>
   </div>
-
-
-
-
 </main>

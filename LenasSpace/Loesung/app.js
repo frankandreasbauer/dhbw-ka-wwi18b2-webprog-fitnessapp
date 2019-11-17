@@ -33,7 +33,6 @@ class App {
         this._currentPageObject = null;
 
         // Datenbank-Objekt zum Lesen und Speichern von Daten
-        this.database = new Database();
         this.firebase = new Firebase();
     }
 

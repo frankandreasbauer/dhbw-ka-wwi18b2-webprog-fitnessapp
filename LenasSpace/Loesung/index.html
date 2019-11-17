@@ -1,157 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>fralile-fit</title>
-        <link rel="shortcut icon" href="favicon.png" />
+<head>
+  <meta charset="utf-8" />
+  <title>fralile-fit</title>
+  <link rel="shortcut icon" href="favicon.png" />
 
-        <!-- Klasse App: Steuert die gesamte Anwendung -->
-        <script src="app.js"></script>
-        <link rel="stylesheet" href="app.css" />
+  <!-- Klasse App: Steuert die gesamte Anwendung -->
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="app.css" />
 
-        <!-- Google Firebase -->
-<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+  <!-- Google Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
 
-<!-- Tabulator Tables -->
-<link href="https://unpkg.com/tabulator-tables@4.4.3/dist/css/bootstrap/tabulator_bootstrap.min.css" rel="stylesheet">
-<script src="https://unpkg.com/tabulator-tables@4.4.3/dist/js/tabulator.min.js"></script>
+  <!-- Klasse Database: Verwaltet die Daten der Anwendung -->
+  <script src="database.js"></script>
+  <script src="firebase.js"></script>
 
-
-<!-- Bootstrap -->
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-        <!-- Klasse Database: Verwaltet die Daten der Anwendung -->
-        <script src="database.js"></script>
-        <script src="firebase.js"></script>
-
-        <!-- Klassen für die einzelnen App-Seiten -->
-        <script src="page-overview/page-overview.js"></script>
-        <script src="page-detail/page-detail.js"></script>
-        <script src="page-not-found/page-not-found.js"></script>
-        <script src="page-personal-data/page-personal-data.js"></script>
-        <script src="page-target/page-target.js"></script>
-        <script src="page-training/page-training.js"></script>
+  <!-- Klassen für die einzelnen App-Seiten -->
+  <script src="page-overview/page-overview.js"></script>
+  <script src="page-detail/page-detail.js"></script>
+  <script src="page-not-found/page-not-found.js"></script>
+  <script src="page-personal-data/page-personal-data.js"></script>
+  <script src="page-target/page-target.js"></script>
+  <script src="page-training/page-training.js"></script>
 
 
-        <!-- Fontello Icon Font (generiert auf fontello.com) -->
-        <link rel="stylesheet" href="fontello/css/fontello.css" />
+  <!-- Fontello Icon Font (generiert auf fontello.com) -->
+  <link rel="stylesheet" href="fontello/css/fontello.css" />
 
-        <!-- Stylesheets zur Gestaltung einzelner HTML-Elemente -->
-        <link rel="stylesheet" href="elements/button.css" />
-        <link rel="stylesheet" href="elements/tab-buttons.css" />
-        <link rel="stylesheet" href="elements/form.css" />
+  <!-- Stylesheets zur Gestaltung einzelner HTML-Elemente -->
+  <link rel="stylesheet" href="elements/button.css" />
+  <link rel="stylesheet" href="elements/tab-buttons.css" />
+  <link rel="stylesheet" href="elements/form.css" />
 
-        <!-- Anwendung starten -->
-        <script>
-            window.addEventListener("load", () => {
-                let pages = [{
-                    url: "^/$",
-                    klass: PageOverview,
-                },{
-                    url:"^/Personal/(.*)$",
-                    klass: PagePersonalData,
-                },{
-                    url:"^/Target/(.*)$",
-                    klass: PageTarget,
-                },{
-                    url:"^/Train/(.*)$",
-                    klass: PageTraining,
-                },{
-                    url: "^/Detail/(.*)$",
-                    klass: PageDetail,
-                },{
-                    url: ".*",
-                    klass: PageNotFound,
-                }
-              ];
+  <!-- Anwendung starten -->
+  <script>
+  window.addEventListener("load", () => {
+    let pages = [{
+      url: "^/$",
+      klass: PageOverview,
+    },{
+      url:"^/Personal/(.*)$",
+      klass: PagePersonalData,
+    },{
+      url:"^/Target/(.*)$",
+      klass: PageTarget,
+    },{
+      url:"^/Train/(.*)$",
+      klass: PageTraining,
+    },{
+      url: ".*",
+      klass: PageNotFound,
+    }
+  ];
 
-                let app = new App("fralile-fit", pages);
-                app.run();
-            });
-        </script>
+  let app = new App("fralile-fit", pages);
+  app.run();
+});
+</script>
 
-        <!-- Dummy-Element für dynamisch nachgeladene CSS-Regeln -->
-        <style id="page-css"></style>
-    </head>
-    <body>
-        <!-- Kopfbereich der App -->
-        <header>
-            <nav>
-                <!-- Logo, Zurück-Button und Titel der Seite -->
-                <img class="logo" src="logo.png" alt="Logo" />
+<!-- Dummy-Element für dynamisch nachgeladene CSS-Regeln -->
+<style id="page-css"></style>
+</head>
+<body>
+  <!-- Kopfbereich der App -->
+  <header>
+    <nav>
+      <!-- Logo, Zurück-Button und Titel der Seite -->
+      <img class="logo" src="logo.png" alt="Logo" />
 
-                <ul class="menu-left">
-                    <li class="go-back">
-                        <a href="#">
-                            <i class="icon-left-open"></i>
-                            <span class="page-name">Startseite
-                          </span>
-                        </a>
-                    </li>
-                    <li class="dont-go-back hidden">
-                        <span class="page-name">Startseite</span>
-                    </li>
-                    <li class="toggle-menu small-screen-only">
-                        <a href="#">
-                            <i class="icon-menu"></i>
-                        </a>
-                    </li>
-                </ul>
+      <ul class="menu-left">
+        <li class="go-back">
+          <a href="#">
+            <i class="icon-left-open"></i>
+            <span class="page-name">Startseite
+            </span>
+          </a>
+        </li>
+        <li class="dont-go-back hidden">
+          <span class="page-name">Startseite</span>
+        </li>
+        <li class="toggle-menu small-screen-only">
+          <a href="#">
+            <i class="icon-menu"></i>
+          </a>
+        </li>
+      </ul>
+</nav>
 
-                <!-- Übergreifendes App-Menü -->
-                <!-- <ul class="menu-right small-screen-hidden">
-                    <li>
-                        <a href="#/messages">
-                            <i class="icon-chat-empty"></i>
-                            <span class="small-screen-only">Benachrichtigungen</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#/profile">
-                            <i class="icon-user"></i>
-                            <span class="small-screen-only">Benutzerprofil</span>
-                        </a>
-                    </li>
-                </ul> -->
-            </nav>
+<div class="content">
+  Inhalt des Kopfbereichs
+</div>
+</header>
 
-            <div class="content">
-                Inhalt des Kopfbereichs
-            </div>
-        </header>
+<!-- Hauptbereich mit dem Inhalt der einzelnen Seiten -->
+<main id="app-main-area">
+  Inhalt des Hauptbereichs
+</main>
+</body>
 
-        <!-- Hauptbereich mit dem Inhalt der einzelnen Seiten -->
-        <main id="app-main-area">
-            Inhalt des Hauptbereichs
-        </main>
+<footer>
+  <div class="footer-end">
+    <h1>fralile-fit GmbH</h1>
+    <span class="footer-design">
+      <a style="text-decoration:none">
+        &copy 2019
+      </a>
+    </span>
+    <span class="footer-design">
+      <a style="text-decoration:none" >
+        DSGVO-konform
+      </a>
+    </span>
+  </div>
+</footer>
 
-
-
-
-        <!--FIREBASE-->
-
-
-    </body>
-    <footer>
-      <div class="footer-end">
-          <h1>fralile-fit GmbH</h1>
-          <span class="footer-design">
-            <a style="text-decoration:none">
-              	&copy 2019
-            </a>
-          </span>
-          <span class="footer-design">
-            <a style="text-decoration:none" >
-              DSGVO-konform
-            </a>
-          </span>
-        </div>
-    </footer>
 </html>
