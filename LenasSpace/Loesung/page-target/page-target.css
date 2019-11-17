@@ -13,7 +13,7 @@
 .angaben {
   display:inline;
   text-align: left;
-  padding-top: 8%;
+  padding-top: 10%;
   padding-left: 6.6%;
   padding-right:20%;
   border-left: 10%;
@@ -23,7 +23,7 @@
 .input {
   display:inline;
   text-align:center;
-  padding-top: 8%;
+  padding-top: 10%;
   padding-left: 10%;
   border-left: 10%;
 }
@@ -33,7 +33,7 @@
   border-radius: 25px;
   border: 0.1rem solid #6D87C5;
   padding: 2rem;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
   width: 40%;
   height: 4%;
   transform: translate(55%, 20%);
@@ -78,16 +78,16 @@ div {
 }
 
 p {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
-h2 {
+/*h2 {
    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 
 }
 
-/*.text {
+.text {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   color: black;
 }
