@@ -1,14 +1,56 @@
-
+/*
 .divAkt{
   float: left;
     margin-top: -2em;
 
-}
+}*/
 
 .divWu{
   float:right;
   margin-top: -2em;
 }
+
+.angaben {
+  display:inline;
+  text-align: left;
+  padding-top: 8%;
+  padding-left: 6.6%;
+  padding-right:20%;
+  border-left: 10%;
+  font-size: 1rem;
+}
+
+.input {
+  display:inline;
+  text-align:center;
+  padding-top: 8%;
+  padding-left: 10%;
+  border-left: 10%;
+}
+
+.inputbox {
+  text-align: left;
+  border-radius: 25px;
+  border: 0.1rem solid #6D87C5;
+  padding: 2rem;
+  padding-bottom: 2%;
+  width: 40%;
+  height: 4%;
+  transform: translate(55%, 20%);
+}
+
+.inputbox > img{
+  float:left;
+}
+
+#gewicht{
+  height: 70%;
+  font-size: 1rem;
+  border-left: 25%;
+  width: 30%;
+  transform: translate(50%,0%);
+}
+
 
 .divTab{
 bottom: 2em;
@@ -136,6 +178,8 @@ h3 {
   background-color: white;
 } */
 
+
+ /* Tabelle */
  #tableTrain{
    font-size: 0.8em;
    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;

@@ -2,27 +2,32 @@
   <header>
     <h1>Meine Ziele</h1>
 </header>
-
 <main>
-  <div class="divAkt">
-    <h2>Aktuelles Gewicht:</h2>
-    <p class="kg"><output id="aktGew" type="number" aktuellesGewicht="" value="" readonly> </output> kg</p>
-  </div>
+<p class="center"> Hier können Sie Ihr persönliches Wunschgewicht angeben:</p>
 
 
-<div class="divWu">
-<h2>Mein Wunschgewicht:</h2>
-<p class="kg">
-<div id="box">
+  <p class= "inputbox">
+      <img src="pd_weight.png"; style="float:left" height = 100%>
+        <label class ="angaben">
+          Mein aktuelles Gewicht:
+    <output id="aktGew" type="number" aktuellesGewicht="" value="" readonly> </output> kg
+</label>
+</p>
+
+<p class= "inputbox">
+<!--<div class="divWu">-->
+<img src="pd_age.png"; style="float:left" height = 100%>
+<label class ="angaben">
+  Mein Wunschgewicht:
   <a class="linksBtn" id="links">-</a>
-  <output id="mitte">0</output> kg<!--Gewicht von persönlichen Daten-->
+  <output id="mitte">0</output> kg
   <a class="rechtsBtn"  id="rechts">+</a>
-</div></p>
-</div>
+</label>
 
 
+<!--Tabelle-->
 <div class="divTab">
-<p>Dein Trainingsplan:</p>
+<h4>Mein Trainingsplan:</h4>
 <table id=tableTrain>
     <th>
        Montag
