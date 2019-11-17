@@ -52,14 +52,14 @@ z-index: 2;
 float:left;
 }
 
-
+/*Layout Anfangstext*/
 p {
   font-size: 25px;
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
 
-/*Layout Wunschgewicht + und - Button*/
+/*Layout Wunschgewicht + und -*/
 .box {
   background-color: grey;
   float: left;
@@ -136,6 +136,7 @@ p {
   text-decoration: none;
 }
 
+ /* Mauszeiger */
 .linksBtn:hover{
   color:black;
 }
@@ -148,8 +149,8 @@ p {
   color:black;
 }
 
-
-h3 {
+/*Layout Überschrift*/
+h4 {
   font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
 }
 
